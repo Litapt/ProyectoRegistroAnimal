@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta de Seguridad </title>
+     <link rel="stylesheet" href="PreguntaSeguridad.css" />
+</head>
+<body background="FondoIA.png">
+    <header >
+        <div class="PPSHeader">
+            <img src="Imagen.png" class="PPMenuIcono" style="width:3%;">
+            <img src="Imagen.png" class="PPMenuIcono" style="width:3%;">
+            <a href="#" class="PPLogo"><img src="LogoGobierno.png" style="width:15%; margin-left:35%; margin-right: 35%;"></a>
+            <label for="PPMenu">
+            <img src="Imagen.png" class="PPMenuIcono" style="width:3%;">
+        </div>
+    </header>
+    <main class="cuadro">
+        <h1>Pregunta de Seguridad</h1>
+        <p>Completa los datos</p>
+        <hr>
+        <Label for="CURP">CURP: *</Label>
+        <input type="text" id="CURP" name="CURP" placeholder="Juan Benito Martinez Gonzalez" required>
+        <Label for="correo">Correo Electronico: *</Label>
+        <input type="email" id="correo" name="correo" placeholder="corre01@gmail.com" required>
+        <hr>
+        <div class="notificacion">
+        <label>Desea recibir notificaciones en su correo sobre noticias del area de ecologia?</label>
+        </div>
+        <div class="respuesta">
+            <label for="si">Si</label>
+            <input class="radio" type="radio" id="radiouno" name="radios">
+            <label for="no">No</label>
+            <input class="radio" type="radio" id="radiodos" name="radios">
+        </div>
+        <button type="submit" class="btn">Aceptar</button>
+        <button type="submit" class="btn">Cancelar</button>
+    </main>
+</body>
+</html>
