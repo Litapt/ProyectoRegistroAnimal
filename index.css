@@ -12,7 +12,7 @@ body {
     text-align: center;
     background-color: rgba(55, 137, 55, 0.636);
 }
-.PPRegistroTrabajadores{
+.PPRegistroTrabajadores {
     color: black;
     margin-right: 10%;
 }
@@ -26,26 +26,10 @@ body {
     margin-right: 10%;
     margin-left: 10%;
 }
-.PPMenu{
+.PPNavBar{
     text-align: center;
 }
 
-.PIMenuRegistroAnimal{
-    background-color: rgb(55, 137, 55);
-    color: white;
-    width: 36%;
-    height: 40%;
-    margin: 8% auto;
-    border-radius: 5%;
-    position: relative;
-    box-shadow: #222 0px 0px 10px;
-    padding-bottom: 5%;
-    padding-top: 2.5%;
-    padding-left: 3%;
-}
-#fecha, #propietario, #tel, #catastral, #cantidad, #especie, #btnregistro{
-    margin-block: 1%;
-}
 .PIMarcaDeAgua img{
     position: fixed;
     bottom: 0; 
