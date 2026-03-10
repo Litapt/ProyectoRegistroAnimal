@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 body {
     background-size: cover;
@@ -8,7 +9,8 @@ body {
     background-position: center;
 }
 .PPHeader{
-    text-align: center; background-color: rgba(55, 137, 55, 0.636);
+    text-align: center;
+    background-color: rgba(55, 137, 55, 0.636);
 }
 .PPRegistroTrabajadores{
     color: black;
@@ -43,4 +45,11 @@ body {
 }
 #fecha, #propietario, #tel, #catastral, #cantidad, #especie, #btnregistro{
     margin-block: 1%;
+}
+.PIMarcaDeAgua img{
+    position: fixed;
+    bottom: 0; 
+    right: 0;
+    width: 120px;
+    opacity: 0.7;
 }

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="Progreso">
+        <h3>
+        REGISTRAR PROPIETARIO
+        </h3>
+        <form id="FUno">
+            <input type="date" id="fecha" name="fecha" placeholder="Fecha" required>
+            <input type="text" id="propietario" name="propietario" placeholder="Nombre del propietario" required>
+            <input type="tel" id="tel" name="tel" placeholder="Telefono" required>
+            <input type="text" id="catastral" name="catastral" placeholder="Clave catastral" required>
+            <input type="number" id="cantidad" name="cantidad" placeholder="Cantidad" required min="1">
+            <button type="button" onclick="generarRegistros()" class="btnregistro" id="btnregistro">Siguiente</button>
+        </form>
+    </div>
+</body>
+</html>
+<!--<script>
+    function generarRegistros() {
+        let cantidad = document.getElementById("cantidad").value;
+        let contenedor = document.getElementById("PPRegistroDeAnimales");
+        contenedor.innerHTML = ""; // limpia registros anteriores
+        for(let i = 1; i <= cantidad; i++) {
+            let registro = document.createElement("div");
+            registro.innerHTML = `
+                <p>REGISTRAR MASCOTA ${i}</p>
+                <input type="text" placeholder="Nombre">
+                <input type="text" placeholder="Edad">
+                <select id="especie" name="especie" required>
+                <option value="">
+                    Selecciona especie...
+                </option>
+                <option value="canino">
+                    Canino
+                </option>
+                <option value="felino">
+                    Felino
+                </option>
+                <option value="aves">
+                    Aves
+                </option>
+                <option value="peces">
+                    Peces
+                </option>
+                <option value="anfibios">
+                    Anfibios
+                </option>
+                <option value="reptiles">
+                    Reptiles
+                </option>
+                <option value="invertebrados">
+                    Invertebrados
+                </option>
+                </select>
+                <hr>
+            `;
+        contenedor.appendChild(registro);
+        }
+    }
+</script>-->
