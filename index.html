@@ -3,27 +3,76 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Mi mascota Comondu</title>
+    <link rel="stylesheet" href="index.css" />
 </head>
 <body background="FondoIA.png">
-    <header >
+    <header>
         <div class="PPHeader">
-            <img src="Imagen.png" class="PPMenuIcono" style="width:3%;">
-            <img src="Imagen.png" class="PPMenuIcono" style="width:3%;">
-            <a href="#" class="PPLogo"><img src="LogoGobierno.png" style="width:15%; margin-left:35%; margin-right: 35%;"></a>
-            <label for="PPMenu">
-            <img src="Imagen.png" class="PPMenuIcono" style="width:3%;">
+            <img src="Imagen.png" class="PPMenuIcono">
+            <img src="Imagen.png" class="PPMenuIcono">
+            <div class="PPHeaderTitulo">
+            <h1>
+                Mi mascota Comondu
+            </h1>
+            <p>
+                Registro animal del municipio de comondú
+            </p>
+            </div>
+            <button class="PPBotonMenu" onclick="PPMenuPerfil.hidden^=1">
+                <img src="Imagen.png" class="PPMenuIcono">
+            </button>
+            <ul id="PPMenuPerfil" hidden>
+                <li>
+                    <a href="misDatos.html">
+                        Mis datos
+                    </a>
+                </li>
+                <li>
+                    <a href="estadisticas.html">
+                    Estadisticas
+                    </a>
+                </li>
+                <li>
+                    <a href="registroTrabajadores.html">
+                    Registro trabajadores
+                    </a>
+                </li>
+                <li>
+                    <a href="login.html">
+                    Cerrar sesion
+                    </a>
+                </li>
+            </ul>
         </div>
     </header>
     <hr>
     <nav class="PPNavBar">
-        <p>
-            <a class="PPRegistroTrabajadores" href="registroTrabajadores.html">Registro trabajadores</a>
-            <a class="PPRegistroMascota" href="registro.html">Registro mascota</a>
-            <a class="PPEstadisticas" href="estadisticas.html">Estadisticas</a>
-            <a class="PPMisDatos" href="misDatos.html">Mis datos</a>
-        <p>
+        <form>
+            <button id="boton" name="boton">
+                <img src="FlechaIzquierda.png" class="PPMenuFlecha">
+            </button>
+            <a class="PPRegistroTrabajadores" href="registroTrabajadores.html">
+                <button id="boton" name="boton">
+                    Registro trabajadores
+                </button>
+            </a>
+            <a class="PPRegistroMascota" href="registro.html">
+                <button id="boton" name="boton">
+                    Registro mascota
+                </button>
+            </a>
+            <a class="PPEstadisticas" href="estadisticas.html">
+                <button id="boton" name="boton">
+                    Estadisticas
+                </button>
+            </a>
+            <a class="PPMisDatos" href="misDatos.html">
+                <button id="boton" name="boton">
+                    Mis datos
+                </button>
+            </a>
+        </form>
     </nav>
     <div class="PIMarcaDeAgua">
         <img src="ImagenEquipoNF.png">
