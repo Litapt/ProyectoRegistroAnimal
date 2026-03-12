@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+.PPHeader{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    background-color: rgba(55, 137, 55, 0.636);
+    padding: 10px;
+    gap: 50px;
+}
+.PPMenuIcono{
+    width: clamp(35px, 4vw, 70px);
+    height: auto;
+}
+.PPHeaderTitulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.PPNavBar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+}
+.PPBotonMenu{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.PPPerfil{
+    position: relative;
+    display: inline-block;
+}
+#PPMenuPerfil{
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: white;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+#boton{
+    background-color: rgba(55, 137, 55, 0.636);
+    border: none;
+    cursor: pointer;
+}
+.PPFlechaRegreso{
+    width: clamp(35px, 4vw, 70px);
+    height: auto;
+}
+.PIMarcaDeAgua img{
+    position: fixed;
+    bottom: 0; 
+    right: 0;
+    width: 120px;
+    opacity: 0.7;
+}
+.PPMenuFlecha{
+    width: 15px;
+}

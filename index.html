@@ -3,49 +3,79 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Mi mascota Comondu</title>
+    <link rel="stylesheet" href="index.css" />
 </head>
 <body background="FondoIA.png">
-    <header >
+    <header>
         <div class="PPHeader">
-            <img src="Imagen.png" class="PPMenuIcono" style="width:3%;">
-            <img src="Imagen.png" class="PPMenuIcono" style="width:3%;">
-            <a href="#" class="PPLogo"><img src="LogoGobierno.png" style="width:15%; margin-left:35%; margin-right: 35%;"></a>
-            <label for="PPMenu">
-            <img src="Imagen.png" class="PPMenuIcono" style="width:3%;">
+            <img src="Imagen.png" class="PPMenuIcono">
+            <img src="Imagen.png" class="PPMenuIcono">
+            <div class="PPHeaderTitulo">
+            <h1>
+                Mi mascota Comondu
+            </h1>
+            <p>
+                Registro animal del municipio de comondú
+            </p>
+            </div>
+            <button class="PPBotonMenu" onclick="PPMenuPerfil.hidden^=1">
+                <img src="Imagen.png" class="PPMenuIcono">
+            </button>
+            <ul id="PPMenuPerfil" hidden>
+                <li>
+                    <a href="misDatos.html">
+                        Mis datos
+                    </a>
+                </li>
+                <li>
+                    <a href="estadisticas.html">
+                    Estadisticas
+                    </a>
+                </li>
+                <li>
+                    <a href="registroTrabajadores.html">
+                    Registro trabajadores
+                    </a>
+                </li>
+                <li>
+                    <a href="login.html">
+                    Cerrar sesion
+                    </a>
+                </li>
+            </ul>
         </div>
     </header>
     <hr>
-    <div class="PPMenu" style="text-align: center;">
     <nav class="PPNavBar">
-        <p>
-            <a class="PPRegistroTrabajadores" href="#">Registro trabajadores</a>
-            <a class="PPRegistroMascota" href="#">Registro mascota</a>
-            <a class="PPEstadisticas" href="#">Estadisticas</a>
-        <p>
+        <form>
+            <button id="boton" name="boton">
+                <img src="FlechaIzquierda.png" class="PPMenuFlecha">
+            </button>
+            <a class="PPRegistroTrabajadores" href="registroTrabajadores.html">
+                <button id="boton" name="boton">
+                    Registro trabajadores
+                </button>
+            </a>
+            <a class="PPRegistroMascota" href="registro.html">
+                <button id="boton" name="boton">
+                    Registro mascota
+                </button>
+            </a>
+            <a class="PPEstadisticas" href="estadisticas.html">
+                <button id="boton" name="boton">
+                    Estadisticas
+                </button>
+            </a>
+            <a class="PPMisDatos" href="misDatos.html">
+                <button id="boton" name="boton">
+                    Mis datos
+                </button>
+            </a>
+        </form>
     </nav>
-    </div>
-    <div class="PIMenuRegistro">
-        <div class="Progreso">
-        </div>
-            <ol>
-                <li>Paso 1</li>
-                <li>Paso 2</li>
-                <li>Paso 3</li>
-            </ol>
-    </div>
     <div class="PIMarcaDeAgua">
-        <img src="ImagenEquipoNF.png" style="position: fixed; bottom: 0;  right: 0; width: 120px; opacity: 0.7;">
+        <img src="ImagenEquipoNF.png">
     </div>
 </body>
 </html>
-<!--CREACION DE MENU PRINCIPAL: https://www.youtube.com/watch?v=6fqxL6dhHiI&list=PL4aGHQazPtuN_M53hugLj1J9A1TJj9-rV-->
-<!--SEPARAR POR LINEAS LOS PARRAFOS: https://www.youtube.com/watch?v=jcJsCDgRi4o&t=31s-->
-<!--CREACION DE FORMULARIO CON PASOS (STEP): https://www.youtube.com/watch?v=NZNluFpH4FA-->
-<!--CREACION DE FORMULARIO DE INICIO DE SESIÓN: https://www.youtube.com/watch?v=XPrs9nqiYOc-->
-<!--INSERCION DE FUENTES EXTERNAS: https://www.youtube.com/watch?v=LffuwO_m-k8-->
-<!--CREACION DE FORMULARIO DE REGISTRO: https://www.youtube.com/watch?v=ZzVXaE14938-->
-<!--RAZAS DE PERRO EXISTENTES: https://www.purina.es/encuentra-mascota/razas-de-perro-->
-<!--RAZAS DE GATOS EXISTENTES: https://www.purina.es/encuentra-mascota/razas-de-gato-->
-<!--RAZAS DE REPTILES Y ARTOPODOS: https://www.zooplus.es/magazine/reptiles/especies-de-reptiles-->
