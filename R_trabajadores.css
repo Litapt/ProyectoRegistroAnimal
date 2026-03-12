@@ -1,0 +1,121 @@
+/* Configuración General y Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;      
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #48c774; /* Verde claro del fondo */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER (Barra Superior) */
+.main-header {
+    background: linear-gradient(to right, #20a383, #4ecc7c);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.title-container h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.title-container p {
+    font-size: 1.1rem;
+    margin-top: -5px;
+    font-weight: 300;
+}
+
+.header-logos {
+    display: flex;
+    gap: 15px;
+}
+
+
+/* Asegura que el título siempre ocupe el centro real */
+.title-container {
+    flex-grow: 1;
+}
+
+/* --- MAIN CARD (Formulario) --- */
+.main-card {
+    background-color: white;
+    margin: 50px auto; /* Centrado horizontal con margen arriba/abajo */
+    padding: 40px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.main-card h1 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+.main-card p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* --- FORMULARIO --- */
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #333;
+}
+
+input {
+    border: none;
+    border-bottom: 2px solid #48c774; /* Línea verde característica */
+    padding: 10px 5px;
+    margin-bottom: 10px;
+    outline: none; /*Evita que aparezca un cuadro azul o negro al hacer clic para escribir.*/
+    font-size: 1rem;
+}
+
+input:focus {
+    border-bottom: 2px solid #2d814a;
+}
+
+input::placeholder {
+    color: #bbb;
+    font-size: 0.9rem;
+}                                                                                                                                                                                                                                                       
+
+/* --- BOTÓN --- */
+.btn {
+    background-color: #48c774;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #36a55a;
+}
