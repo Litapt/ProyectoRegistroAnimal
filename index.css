@@ -3,74 +3,73 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 body{
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
+    margin:0;
+    background-color:#52c47d;
 }
 .PPHeader{
-    display: flex;
-    align-items: center;
+    background: linear-gradient(to right,#20a383,#52c47d);
+    display:flex;
+    align-items:center;
     justify-content:center;
-    background-color: rgba(55, 137, 55, 0.636);
-    padding: 10px;
-    gap: 50px;
+    gap:40px;
+    padding:10px;
+    position:relative;
 }
 .PPMenuIcono{
-    width: clamp(35px, 4vw, 70px);
-    height: auto;
+    width:clamp(35px,4vw,70px);
+    height:auto;
 }
 .PPHeaderTitulo{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.PPNavBar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5vw;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 }
 .PPBotonMenu{
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-}
-.PPPerfil{
-    position: relative;
-    display: inline-block;
+    background:transparent;
+    border:none;
+    cursor:pointer;
 }
 #PPMenuPerfil{
-    position: absolute;
-    right: 0;
-    top: 100%;
-    background: white;
-    list-style: none;
-    padding: 10px;
-    margin: 0;
-    border-radius: 5px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    position:absolute;
+    top:100%;
+    right:20px;
+    background:white;
+    list-style:none;
+    padding:10px;
+    margin:0;
+    border-radius:6px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.2);
+    width:max-content;
+}
+#PPMenuPerfil li{
+    padding:8px 12px;
+}
+#PPMenuPerfil li:hover{
+    background:#f0f0f0;
 }
 a{
-    text-decoration: none;
-    color: black;
+    text-decoration:none;
+    color:black;
+}
+.PPNavBar{
+    display:flex;
+    justify-content:center;
+    margin-top:80px;
 }
 #boton{
-    background-color: rgba(55, 137, 55, 0.636);
-    border: none;
-    cursor: pointer;
-}
-.PPFlechaRegreso{
-    width: clamp(35px, 4vw, 70px);
-    height: auto;
-}
-.PIMarcaDeAgua img{
-    position: fixed;
-    bottom: 0; 
-    right: 0;
-    width: 120px;
-    opacity: 0.7;
+    background:linear-gradient(to right,#20a383,#52c47d);
+    border:none;
+    padding:10px 20px;
+    cursor:pointer;
+    border-radius:6px;
 }
 .PPMenuFlecha{
-    width: 15px;
+    width:15px;
+}
+.PIMarcaDeAgua img{
+    position:fixed;
+    bottom:0;
+    right:0;
+    width:120px;
+    opacity:0.7;
 }
