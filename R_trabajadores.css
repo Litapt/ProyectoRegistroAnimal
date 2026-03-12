@@ -24,27 +24,52 @@ body {
     text-align: center;
 }
 
-.title-container h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin: 0;
+.main-header {
+    background: linear-gradient(to right, #20a383, #4ecc7c);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
 }
 
-.title-container p {
-    font-size: 1.1rem;
-    margin-top: -5px;
-    font-weight: 300;
-}
-
+/* Contenedores de logos */
 .header-logos {
     display: flex;
     gap: 15px;
+    flex: -4; /* Distribuye espacio equitativo a los lados */
 }
 
+.header-logos.der {
+    justify-content: flex-end; /* Empuja el logo derecho al final */
+}
 
-/* Asegura que el título siempre ocupe el centro real */
+/* ESTILO DE LAS IMÁGENES CIRCULARES */
+.logo-img {
+    width: 70px;  /* Ajusta el tamaño a tu gusto */
+    height: 70px; /* Debe ser igual al width para que sea un círculo */
+    border-radius: 50%;
+    object-fit: cover; /* Evita que la imagen se deforme */
+    background-color: white; /* Opcional: fondo por si la imagen es transparente */
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Un borde sutil queda muy bien */
+}
+
+/* Texto central */
 .title-container {
-    flex-grow: 1;
+    flex: 2;
+    text-align: center;
+}
+
+.title-container h1 {
+    font-size: 2.2rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+.title-container p {
+    font-size: 1rem;
+    margin: 0;
+    font-weight: 300;
 }
 
 /* --- MAIN CARD (Formulario) --- */

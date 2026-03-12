@@ -18,9 +18,23 @@ body {
     background: linear-gradient(to right, #20a383, #52c47d);
     padding: 20px 50px;
     display: flex;
-    justify-content: space-between;/* Empuja el título a la izq y los logos a la der /*centra el texto y los logos para que esten alineados */
-    align-items: center; /*centra vertical el texto y los logos para que esten alineados*/
+    justify-content: space-between; /* Título a la izquierda, logos a la derecha */
+    align-items: center; /* Alineación vertical perfecta */
     color: white;
+}
+
+/* Este es el contenedor de las imágenes */
+.header-logos {
+    display: flex;
+    align-items: center; 
+    gap: 20px; /* Esto crea un espacio uniforme entre cada logo */
+}
+
+/* Control total sobre las imágenes */
+.header-logos img {
+    height: 50px; /* Es mejor fijar la altura para que todos se vean parejos */
+    width: auto;  /* El ancho se ajusta solo para no deformar la imagen */
+    object-fit: contain;
 }
 
 .title-container h1 {
@@ -28,10 +42,6 @@ body {
     margin-bottom: 5px;
 }
 
-.header-logos {
-    display: flex;
-    gap: 15px;
-}
 
 /* Área de contenido */
 .content {
