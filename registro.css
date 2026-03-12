@@ -1,0 +1,44 @@
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 30px;
+    background-color: #52c47d;
+}
+#FUno, #FDos{
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #222;
+    border-radius: 10px;
+    box-shadow: #222 0px 0px 10px;
+    background-color: white;
+}
+#FDos{
+    display: none;
+    margin-top: 30px;
+    left: 450px;
+}
+label{
+    display: block;
+    margin-bottom: 12px;
+    margin-top: 6px;
+}
+input, select, textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #222;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+.btn{
+    margin-top: 16px;
+    padding: 12px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+}
+.foto{
+    display: inline-block;
+    vertical-align: baseline;
+}

@@ -57,7 +57,7 @@ a{
     margin-top:80px;
 }
 #boton{
-    background:linear-gradient(to right,#20a383,#52c47d);
+    background:rgba(255, 255, 255, 0.493);
     border:none;
     padding:10px 20px;
     cursor:pointer;
