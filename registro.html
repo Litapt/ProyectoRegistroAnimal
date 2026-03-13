@@ -13,30 +13,30 @@
             <h3>
             REGISTRAR PROPIETARIO
             </h3>
-            <label>
+            <label for="fecha">
                 Fecha de registro
             </label>
             <input type="date" id="fecha" name="fecha" placeholder="Fecha" required>
-            <label>
+            <label for="propietario">
                 Nombre del propietario
             </label>
             <input type="text" id="propietario" name="propietario" placeholder="Nombre del propietario" required>
-            <label>
+            <label for="tel">
                 Telefono
             </label>
             <input type="tel" id="tel" name="tel" placeholder="Telefono" required>
-            <label>
+            <label for="catastral">
                 Clave catastral
             </label>
             <input type="text" id="catastral" name="catastral" placeholder="Clave catastral" required>
-            <label>
+            <label for="cantidad">
                 Cantidad
             </label>
             <input type="number" id="cantidad" name="cantidad" placeholder="Cantidad" required min="1">
             <br>
             <button type="button" onclick="mostrarRegistro()" class="btn" id="btn">Siguiente</button>
         </form>
-        <form id="FDos">
+        <form id="FDos" style="display: none;">
         <h3>
             REGISTRO DE ANIMALES
         </h3>
@@ -131,6 +131,7 @@
             <!--<input type="" id="Direccion" name="Direccion"label>-->
             <!--Esto de aqui queda pendiente-->
             <label for="Sexo">Sexo*</label>
+            <!--PREGUNTAR AL MAESTRO COMO HACER PARA QUE NO HAYA UN SALTO DE LINEA DESPUES DE ESTOS INPUT-->
             <label for="Macho">Macho</label>
             <input type="radio" id="Sexo" name="Sexo" value="Macho">
             <label for="Hembra">Hembra</label>

@@ -13,8 +13,7 @@ body{
     box-shadow: #222 0px 0px 10px;
     background-color: white;
 }
-#FDos{
-    display: none;
+.formAnimal{
     margin-top: 30px;
     left: 450px;
 }

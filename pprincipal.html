@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mi mascota Comondu</title>
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="pprincipal.css" />
 </head>
 <body>
     <header>
@@ -53,9 +53,10 @@
     </header>
     <nav class="PPNavBar">
         <form>
-            <button id="boton" onclick="location.href='login.html'">
+            <!--PREGUNTAR AL PROFE POR QUE NO TE MANDA AL LOGIN EN EL BOTON, PERO SI DESDE EL LINK-->
+            <a href="login.html" id="botonflecha">
                 <img src="FlechaIzquierda.png" class="PPMenuFlecha">
-            </button>
+            </a>
             <button id="boton" name="boton">
                 <a class="PPRegistroTrabajadores" href="registroTrabajadores.html">
                     Registro trabajadores
@@ -78,6 +79,9 @@
             </button>
         </form>
     </nav>
+    <div class="relleno">
+        <img src="mascotasnofondo.png"  class="imgrelleno">
+    </div>
     <div class="PIMarcaDeAgua">
         <img src="ImagenEquipoNF.png">
     </div>

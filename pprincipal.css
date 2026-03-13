@@ -59,7 +59,18 @@ a{
 #boton{
     background:rgba(255, 255, 255, 0.493);
     border:none;
-    padding:10px 20px;
+    padding:10px 10px;
+    margin-inline: 10px;
+    cursor:pointer;
+    border-radius:6px;
+}
+#botonflecha{
+    background:rgba(255, 255, 255, 0.493);
+    border:none;
+    padding-top: 7px;
+    padding-bottom: 9px;
+    padding-inline: 10px;
+    margin-inline: 10px;
     cursor:pointer;
     border-radius:6px;
 }
@@ -72,4 +83,10 @@ a{
     right:0;
     width:120px;
     opacity:0.7;
+}
+.imgrelleno{
+    width: 650px;
+}
+.relleno{
+    margin-left: 50px;
 }
