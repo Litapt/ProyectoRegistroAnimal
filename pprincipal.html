@@ -5,83 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mi mascota Comondu</title>
     <link rel="stylesheet" href="pprincipal.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </head>
-<body>
-    <header>
-        <div class="PPHeader">
-            <img src="Imagen.png" class="PPMenuIcono">
-            <img src="Imagen.png" class="PPMenuIcono">
-            <div class="PPHeaderTitulo">
-            <h1>
-                Mi mascota Comondu
-            </h1>
-            <p>
-                Registro animal del municipio de comondú
-            </p>
-            </div>
-            <button class="PPBotonMenu" onclick="PPMenuPerfil.hidden^=1">
-                <img src="Imagen.png" class="PPMenuIcono">
-            </button>
-            <ul id="PPMenuPerfil" hidden>
-                <li>
-                    <a href="misDatos.html">
-                        Mis datos
-                    </a>
-                </li>
-                <li>
-                    <a href="registro.html">
-                        Registro
-                    </a>
-                </li>
-                <li>
-                    <a href="estadisticas.html">
-                    Estadisticas
-                    </a>
-                </li>
-                <li>
-                    <a href="registroTrabajadores.html">
-                    Registro trabajadores
-                    </a>
-                </li>
-                <li>
-                    <a href="login.html">
-                    Cerrar sesion
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </header>
-    <nav class="PPNavBar">
-        <form>
-            <!--PREGUNTAR AL PROFE POR QUE NO TE MANDA AL LOGIN EN EL BOTON, PERO SI DESDE EL LINK-->
-            <a href="login.html" id="botonflecha">
-                <img src="FlechaIzquierda.png" class="PPMenuFlecha">
-            </a>
-            <button id="boton" name="boton">
-                <a class="PPRegistroTrabajadores" href="registroTrabajadores.html">
-                    Registro trabajadores
-                </a>
-            </button>
-            <button id="boton" name="boton">
-                <a class="PPRegistroMascota" href="registro.html">
-                    Registro
-                </a>
-            </button>
-            <button id="boton" name="boton">
-                <a class="PPEstadisticas" href="estadisticas.html">            
-                    Estadisticas
-                </a>
-            </button>
-            <button id="boton" name="boton">
-                <a class="PPMisDatos" href="misDatos.html">
-                    Mis datos
-                </a>
-            </button>
-        </form>
-    </nav>
-    <div class="relleno">
-        <img src="mascotasnofondo.png"  class="imgrelleno">
+<body class="bg-success-subtle">
+    <header class="position-relative d-flex align-items-center justify-content-between p-3 PPHeader text-white">
+    <div class="d-flex align-items-center gap-2">
+        <img src="Imagen.png" class="rounded-circle" width="50">
+        <img src="Imagen.png" class="rounded-circle" width="50">
     </div>
+    <div class="position-absolute top-50 start-50 translate-middle text-center">
+        <h4 class="mb-0">Mi mascota Comondú</h4>
+        <small>Registro animal del municipio de Comondú</small>
+    </div>
+    <div class="dropdown">
+        <a class="btn btn-sm btn-outline-light" href="#">
+            Cerrar sesion
+        </a>
+        <button class="btn">
+            <a href="misDatos.html">
+            <img src="Imagen.png" class="rounded-circle" width="50">
+            </a>
+        </button>
+    </div>
+</header>
+    <nav class="PPNavBar container py-4 d-flex justify-content-evenly">
+        <form class="row g-4">
+    
+    <div class="col-12 col-md-6 d-flex">
+        <a href="registroTrabajadores.html" class="boton card border-0 shadow-sm w-100 text-dark text-center p-3 link-offset-2 link-underline link-underline-opacity-0">
+            Registro trabajadores
+        </a>
+    </div>
+
+    <div class="col-12 col-md-6 d-flex">
+        <a href="registro.html" class="boton card border-0 shadow-sm w-100 text-dark text-center p-3 link-offset-2 link-underline link-underline-opacity-0">
+            Registro
+        </a>
+    </div>
+
+    <div class="col-12 col-md-6 d-flex">
+        <a href="estadisticas.html" class="boton card border-0 shadow-sm w-100 text-dark text-center p-3 link-offset-2 link-underline link-underline-opacity-0">
+            Estadísticas
+        </a>
+    </div>
+
+    <div class="col-12 col-md-6 d-flex">
+        <a href="misDatos.html" class="boton card border-0 shadow-sm w-100 text-dark text-center p-3 link-offset-2 link-underline link-underline-opacity-0">
+            Mis datos
+        </a>
+    </div>
+</form>
+    </nav>
     <div class="PIMarcaDeAgua">
         <img src="ImagenEquipoNF.png">
     </div>

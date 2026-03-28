@@ -2,80 +2,12 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-body{
-    margin:0;
-    background-color:#52c47d;
-}
 .PPHeader{
     background: linear-gradient(to right,#20a383,#52c47d);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:40px;
-    padding:10px;
-    position:relative;
 }
-.PPMenuIcono{
-    width:clamp(35px,4vw,70px);
-    height:auto;
-}
-.PPHeaderTitulo{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-}
-.PPBotonMenu{
-    background:transparent;
-    border:none;
-    cursor:pointer;
-}
-#PPMenuPerfil{
-    position:absolute;
-    top:100%;
-    right:20px;
-    background:white;
-    list-style:none;
-    padding:10px;
-    margin:0;
-    border-radius:6px;
-    box-shadow:0 3px 10px rgba(0,0,0,0.2);
-    width:max-content;
-}
-#PPMenuPerfil li{
-    padding:8px 12px;
-}
-#PPMenuPerfil li:hover{
-    background:#f0f0f0;
-}
-a{
-    text-decoration:none;
-    color:black;
-}
-.PPNavBar{
-    display:flex;
-    justify-content:center;
-    margin-top:80px;
-}
-#boton{
-    background:rgba(255, 255, 255, 0.493);
-    border:none;
-    padding:10px 10px;
-    margin-inline: 10px;
-    cursor:pointer;
-    border-radius:6px;
-}
-#botonflecha{
-    background:rgba(255, 255, 255, 0.493);
-    border:none;
-    padding-top: 7px;
-    padding-bottom: 9px;
-    padding-inline: 10px;
-    margin-inline: 10px;
-    cursor:pointer;
-    border-radius:6px;
-}
-.PPMenuFlecha{
-    width:15px;
+.boton{
+    color: white;
+    border: none;
 }
 .PIMarcaDeAgua img{
     position:fixed;
@@ -83,9 +15,6 @@ a{
     right:0;
     width:120px;
     opacity:0.7;
-}
-.imgrelleno{
-    width: 650px;
 }
 .relleno{
     margin-left: 50px;
