@@ -1,3 +1,7 @@
+<?php
+require_once 'login/check.php';
+require_rol('ADMINISTRADOR');
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -18,11 +22,11 @@
         <small>Registro animal del municipio de Comondú</small>
     </div>
     <div class="dropdown">
-        <a class="btn btn-sm btn-outline-light" href="index.html">
+        <a class="btn btn-sm btn-outline-light" href="index.php">
             Cerrar sesion
         </a>
         <button class="btn">
-            <a href="misDatos.html">
+            <a href="misDatos.php">
             <img src="Imagen.png" class="rounded-circle" width="50">
             </a>
         </button>
@@ -31,22 +35,22 @@
     <nav class="PPNavBar container py-4 d-flex justify-content-evenly">
         <form class="row g-4">
     <div class="col-12 col-md-6 d-flex">
-        <a href="registroTrabajadores.html" class="boton card border-0 shadow-sm w-100 text-dark text-center p-3 link-offset-2 link-underline link-underline-opacity-0">
+        <a href="registroTrabajadores.php" class="boton card border-0 shadow-sm w-100 text-dark text-center p-3 link-offset-2 link-underline link-underline-opacity-0">
             Registro trabajadores
         </a>
     </div>
     <div class="col-12 col-md-6 d-flex">
-        <a href="registro.html" class="boton card border-0 shadow-sm w-100 text-dark text-center p-3 link-offset-2 link-underline link-underline-opacity-0">
+        <a href="registro.php" class="boton card border-0 shadow-sm w-100 text-dark text-center p-3 link-offset-2 link-underline link-underline-opacity-0">
             Registro
         </a>
     </div>
     <div class="col-12 col-md-6 d-flex">
-        <a href="estadisticas.html" class="boton card border-0 shadow-sm w-100 text-dark text-center p-3 link-offset-2 link-underline link-underline-opacity-0">
+        <a href="estadisticas.php" class="boton card border-0 shadow-sm w-100 text-dark text-center p-3 link-offset-2 link-underline link-underline-opacity-0">
             Estadísticas
         </a>
     </div>
     <div class="col-12 col-md-6 d-flex">
-        <a href="misDatos.html" class="boton card border-0 shadow-sm w-100 text-dark text-center p-3 link-offset-2 link-underline link-underline-opacity-0">
+        <a href="misDatos.php" class="boton card border-0 shadow-sm w-100 text-dark text-center p-3 link-offset-2 link-underline link-underline-opacity-0">
             Consulta
         </a>
     </div>
