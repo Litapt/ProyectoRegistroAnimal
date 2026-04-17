@@ -35,7 +35,7 @@ require_rol('ADMINISTRADOR');
     <nav class="PPNavBar container py-4 d-flex justify-content-evenly">
         <form class="row g-4">
     <div class="col-12 col-md-6 d-flex">
-        <a href="registroTrabajadores.php" class="boton card border-0 shadow-sm w-100 text-dark text-center p-3 link-offset-2 link-underline link-underline-opacity-0">
+        <a href="admin/registroTrabajadores.php" class="boton card border-0 shadow-sm w-100 text-dark text-center p-3 link-offset-2 link-underline link-underline-opacity-0">
             Registro trabajadores
         </a>
     </div>

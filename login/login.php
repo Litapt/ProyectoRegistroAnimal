@@ -2,13 +2,13 @@
 session_start();
 require_once '../bd/conexion.php';
 
-$usuario = $_POST['usuario'] ?? '';
+$correo = $_POST['correo'] ?? '';
 $contrasena = $_POST['password'] ?? '';
 
 $consulta = $conexion->prepare(
-    "SELECT * FROM trabajadores WHERE Username = ? LIMIT 1"
+    "SELECT * FROM trabajadores WHERE CorreoElectronico  = ? LIMIT 1"
 );
-$consulta->bind_param("s", $usuario);
+$consulta->bind_param("s", $correo);
 $consulta->execute();
 $res = $consulta->get_result();
 $user = $res->fetch_assoc();
