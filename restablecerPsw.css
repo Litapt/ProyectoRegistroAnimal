@@ -1,0 +1,10 @@
+.main-header{
+    background: linear-gradient(to right, #20a383, #4ecc7c);
+}
+.logo-img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
