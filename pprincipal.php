@@ -8,6 +8,7 @@ require_rol('ADMINISTRADOR');
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mi mascota Comondu</title>
+    <link rel="icon" href="Imagen.png" type="image/x-icon">
     <link rel="stylesheet" href="pprincipal.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </head>
@@ -50,7 +51,7 @@ require_rol('ADMINISTRADOR');
         </a>
     </div>
     <div class="col-12 col-md-6 d-flex">
-        <a href="misDatos.php" class="boton card border-0 shadow-sm w-100 text-dark text-center p-3 link-offset-2 link-underline link-underline-opacity-0">
+        <a href="consulta.php" class="boton card border-0 shadow-sm w-100 text-dark text-center p-3 link-offset-2 link-underline link-underline-opacity-0">
             Consulta
         </a>
     </div>
