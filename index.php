@@ -65,5 +65,8 @@
         </div>
         <img src="Huella2.png" alt="huella" class="deco-right">
     </main>
+<div class="PIMarcaDeAgua">
+    <img src="ImagenEquipoNF.png">
+</div>
 </body>
 </html>

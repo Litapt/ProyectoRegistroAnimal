@@ -1,4 +1,13 @@
 /* Configuración General es un selector universal. Afecta a todas las etiquetas.*/
+
+.PIMarcaDeAgua img{
+    position:fixed;
+    bottom:0;
+    right:0;
+    width:120px;
+    opacity:0.7;
+}
+
 * {
     margin: 0;
     padding: 0;

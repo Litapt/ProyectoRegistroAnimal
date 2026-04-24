@@ -30,5 +30,8 @@
     </div>
 </header>
 <!--ALAN!! POR FAVOR QUE LOS BOTONES QUE PONGAS HAGAN CONEXION O SE RELACIONEN CON LAS PAGINAS QUE YA ESTAN PUESTAS EN EL GIT!!-->    
+<div class="PIMarcaDeAgua">
+    <img src="ImagenEquipoNF.png">
+</div>
 </body>
 </html>

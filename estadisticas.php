@@ -34,6 +34,9 @@
             </a>
         </button>
     </div>
-</header>    
+</header> 
+<div class="PIMarcaDeAgua">
+    <img src="ImagenEquipoNF.png">
+</div>   
 </body>
 </html>

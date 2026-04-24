@@ -57,8 +57,8 @@ require_rol('ADMINISTRADOR');
     </div>
 </form>
     </nav>
-    <div class="PIMarcaDeAgua">
-        <img src="ImagenEquipoNF.png">
-    </div>
+<div class="PIMarcaDeAgua">
+    <img src="ImagenEquipoNF.png">
+</div>
 </body>
 </html>

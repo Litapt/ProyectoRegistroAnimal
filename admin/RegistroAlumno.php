@@ -39,5 +39,8 @@ require_rol('ADMINISTRADOR');
             </div>
         </div>
     </div>
+    <div class="PIMarcaDeAgua">
+        <img src="ImagenEquipoNF.png">
+    </div>
 </body>
 </html>

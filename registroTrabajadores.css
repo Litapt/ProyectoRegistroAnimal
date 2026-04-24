@@ -8,3 +8,10 @@
     object-fit: cover;
     border: 2px solid rgba(255, 255, 255, 0.3);
 }
+.PIMarcaDeAgua img{
+    position:fixed;
+    bottom:0;
+    right:0;
+    width:120px;
+    opacity:0.7;
+}
