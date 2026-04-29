@@ -6,7 +6,7 @@ const rangeElement=document.getElementById("range");
 const buttonGenerateElement = document.getElementById("generate-password");
 const allowedCharacters =
 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
-const passwordLength = 5;
+const passwordLength = 8;
 /*
 const setPasswordLength=event=>{
 //Asignar longitud de password...
