@@ -17,7 +17,7 @@ $insertar_trabajador=$conexion->prepare($sql_insert_trabajador);
 $insertar_trabajador->bind_param("sssssss",$nombre,$apellidoP,$apellidoM,$curp,$correo,$contra,$rol);
 $insertar_trabajador->execute();
 //falta el mensaje al introducir un trabajador...
-header("Location: RegistroTrabajadores.php");
+header("Location: RegistroTrabajadores.php?success=1");
 exit();
 
 ?>

@@ -3,34 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <title>Restablecer password</title>
+    <link rel="icon" href="Imagen.png" type="image/x-icon">
+    <link rel="stylesheet" href="restablecerPsw.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-    <form>
-  <fieldset disabled>
-    <legend>Disabled fieldset example</legend>
-    <div class="mb-3">
-      <label for="disabledTextInput" class="form-label">Disabled input</label>
-      <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
-    </div>
-    <div class="mb-3">
-      <label for="disabledSelect" class="form-label">Disabled select menu</label>
-      <select id="disabledSelect" class="form-select">
-        <option>Disabled select</option>
-      </select>
-    </div>
-    <div class="mb-3">
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled>
-        <label class="form-check-label" for="disabledFieldsetCheck">
-          Can’t check this
-        </label>
-      </div>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </fieldset>
-</form>
+<body class="bg-success-subtle vh-100">
+    <header class="position-relative d-flex align-items-center justify-content-between p-3 main-header text-white">
+        <div class="d-flex gap-2">
+            <img src="Imagen.png" class="logo-img">
+            <img src="Imagen.png" class="logo-img">
+        </div>
+        <div class="position-absolute top-50 start-50 translate-middle text-center">
+            <h4 class="mb-0">
+                Mi mascota Comondú
+            </h4>
+            <small>
+                Registro animal del municipio de Comondú
+            </small>
+        </div>
+        <div>
+            <a href="misDatos.html">
+                <img src="Imagen.png" alt="Logo" class="logo-img">
+            </a>
+        </div>
+    </header>
+    <main class="container d-flex justify-content-center mt-5">
+        <div class="card shadow p-4 w-100" style="max-width: 500px;">
+            <h4 class="text-center mb-1">
+                RESTABLECER CONTRASEÑA
+            </h4>
+            <form action="#" method="post">
+                <label for="correo" class="form-label">
+                    Correo electrónico
+                </label>
+                <input type="text" class="form-control mb-2" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+            </form>
+            <div class="d-flex gap-2 mt-3">
+            <button class="btn btn-success flex-fill" type="submit">
+                Aceptar
+            </button> 
+            <button class="btn bg-success-subtle flex-fill" type="button">
+                Cancelar
+            </button>
+        </div>
+        </div>
+    </main>
+<div class="PIMarcaDeAgua">
+    <img src="ImagenEquipoNF.png">
+</div>
 </body>
 </html>
