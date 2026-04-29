@@ -31,6 +31,7 @@ if ($contrasena !== $user['Password']) {
     exit;
 }
 
+
 $_SESSION['correo'] = $user['correo'];
 $_SESSION['role'] = $user['role'];
 $_SESSION['ID'] = $user['ID'];
