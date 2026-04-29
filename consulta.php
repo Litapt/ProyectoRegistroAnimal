@@ -1,13 +1,9 @@
-<?php
-require_once 'login/check.php';
-require_rol('ADMINISTRADOR');
-?>
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mi mascota Comondu</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="icon" href="Imagen.png" type="image/x-icon">
     <link rel="stylesheet" href="pprincipal.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
@@ -33,30 +29,7 @@ require_rol('ADMINISTRADOR');
         </button>
     </div>
 </header>
-    <nav class="PPNavBar container py-4 d-flex justify-content-evenly">
-        <form class="row g-4">
-    <div class="col-12 col-md-6 d-flex">
-        <a href="admin/registroTrabajadores.php" class="boton card border-0 shadow-sm w-100 text-dark text-center p-3 link-offset-2 link-underline link-underline-opacity-0">
-            Registro trabajadores
-        </a>
-    </div>
-    <div class="col-12 col-md-6 d-flex">
-        <a href="registro.php" class="boton card border-0 shadow-sm w-100 text-dark text-center p-3 link-offset-2 link-underline link-underline-opacity-0">
-            Registro
-        </a>
-    </div>
-    <div class="col-12 col-md-6 d-flex">
-        <a href="estadisticas.php" class="boton card border-0 shadow-sm w-100 text-dark text-center p-3 link-offset-2 link-underline link-underline-opacity-0">
-            Estadísticas
-        </a>
-    </div>
-    <div class="col-12 col-md-6 d-flex">
-        <a href="consulta.php" class="boton card border-0 shadow-sm w-100 text-dark text-center p-3 link-offset-2 link-underline link-underline-opacity-0">
-            Consulta
-        </a>
-    </div>
-</form>
-    </nav>
+<!--ALAN!! POR FAVOR QUE LOS BOTONES QUE PONGAS HAGAN CONEXION O SE RELACIONEN CON LAS PAGINAS QUE YA ESTAN PUESTAS EN EL GIT!!-->    
 <div class="PIMarcaDeAgua">
     <img src="ImagenEquipoNF.png">
 </div>

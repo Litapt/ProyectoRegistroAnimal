@@ -29,6 +29,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi mascota Comondú - Login</title>
+    <link rel="icon" href="Imagen.png" type="image/x-icon">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -64,5 +65,8 @@
         </div>
         <img src="Huella2.png" alt="huella" class="deco-right">
     </main>
+<div class="PIMarcaDeAgua">
+    <img src="ImagenEquipoNF.png">
+</div>
 </body>
 </html>
