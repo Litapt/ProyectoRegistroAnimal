@@ -37,8 +37,8 @@ require_rol('ADMINISTRADOR');
     <!-- Tarjeta Blanca Central -->
     <div class="card-blanca-central p-5 shadow-lg">
         <div class="d-grid gap-4">
-            <a href="registro_C.php" class="btn btn-menu-rojo">Registro</a>
-            <a href="consulta_C.php" class="btn btn-menu-rojo">Consultar</a>
+            <a href="consultar_T.php" class="btn btn-menu-rojo">consultar</a>
+            <a href="Estadistica_T.php" class="btn btn-menu-rojo">Estadistica </a>
         </div>
         
         <div class="text-center mt-5">
