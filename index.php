@@ -51,7 +51,7 @@
             <form action="login/login.php" method="post">
             <div class="input-group">
                 <label for="correo">Correo electrónico</label>
-                <input type="email" id="correo" name="correo" maxlength="100" required>
+                <input type="email" id="correo" name="CorreoElectronico" maxlength="100" required>
             </div>
             <div class="input-group">
                 <label for="password">Contraseña</label>

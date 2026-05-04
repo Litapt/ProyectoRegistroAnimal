@@ -1,21 +1,61 @@
-*{
+* {
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.PPHeader{
-    background: linear-gradient(to right,#20a383,#52c47d);
+
+.PPHeader {
+    background: linear-gradient(to right, #20a383, #52c47d);
 }
-.boton{
-    color: white;
+
+/* Estilo de los botones grandes dentro del cuadro blanco */
+.boton-menu-grande {
+    background-color: #20a383; /* Tu color verde actual */
+    color: white !important; /* para que Bootstrap no modifique el color clasico  */
+    text-decoration: none !important; /* Quita la línea subrayada que suelen tener los enlaces*/
+    display: flex;
+    align-items: center;/*el texto se queda perfectamente centrado tanto vertical como horizontalmente dentro del botón.*/
+    justify-content: center;/*el texto se queda perfectamente centrado tanto vertical como horizontalmente dentro del botón.*/
+    height: 180px; 
+    font-size: 2rem;/*Hace que el tamaño de la letra sea grande y fácil de leer*/
+    font-weight: 600;
+    border-radius: 25px;
+    text-align: center;
+    padding: 20px;
+    transition: all 0.3s ease;
     border: none;
 }
-.PIMarcaDeAgua img{
-    position:fixed;
-    bottom:0;
-    right:0;
-    width:120px;
-    opacity:0.7;
+
+.boton-menu-grande:hover {
+    background-color: #187a62;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
-.relleno{
+
+/* Estilo para el botón regresar de abajo */
+.btn-regresar-menu {
+    background-color: #20a383;
+    color: white !important;
+    text-decoration: none !important;
+    padding: 12px 50px;
+    border-radius: 50px;
+    font-size: 1.4rem;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.btn-regresar-menu:hover {
+    background-color: #187a62;
+    opacity: 0.9;
+}
+
+.PIMarcaDeAgua img {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 120px;
+    opacity: 0.7;
+}
+
+.relleno {
     margin-left: 50px;
 }

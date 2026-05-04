@@ -14,51 +14,57 @@ require_rol('ADMINISTRADOR');
 </head>
 <body class="bg-success-subtle">
     <header class="position-relative d-flex align-items-center justify-content-between p-3 PPHeader text-white">
-    <div class="d-flex align-items-center gap-2">
-        <img src="Imagen.png" class="rounded-circle" width="50">
-        <img src="Imagen.png" class="rounded-circle" width="50">
-    </div>
-    <div class="position-absolute top-50 start-50 translate-middle text-center">
-        <h4 class="mb-0">Mi mascota Comondú</h4>
-        <small>Registro animal del municipio de Comondú</small>
-    </div>
-    <div class="dropdown">
-        <a class="btn btn-sm btn-outline-light" href="index.php">
-            Cerrar sesion
-        </a>
-        <button class="btn">
-            <a href="misDatos.php">
+        <div class="d-flex align-items-center gap-2">
             <img src="Imagen.png" class="rounded-circle" width="50">
+            <img src="Imagen.png" class="rounded-circle" width="50">
+        </div>
+        <div class="position-absolute top-50 start-50 translate-middle text-center">
+            <h4 class="mb-0">Mi mascota Comondú</h4>
+            <small>Registro animal del municipio de Comondú</small>
+        </div>
+        <div class="dropdown d-flex align-items-center">
+            <a class="btn btn-sm btn-outline-light me-2" href="index.php">
+                Cerrar sesion
             </a>
-        </button>
+            <a href="misDatos.php">
+                <img src="Imagen.png" class="rounded-circle" width="50">
+            </a>
+        </div>
+    </header>
+
+    <!-- Contenedor Principal es el centro -->
+    <main class="container py-5 d-flex justify-content-center">
+        <div class="bg-white p-4 p-md-5 rounded-5 shadow-lg w-100" style="max-width: 1000px;">
+            <div class="row g-4">
+                <div class="col-12 col-md-6">
+                    <a href="registro.php" class="boton-menu-grande">
+                        Registro
+                    </a>
+                </div>
+                <div class="col-12 col-md-6">
+                    <a href="admin/registroTrabajadores.php" class="boton-menu-grande">
+                        Registro trabajadores
+                    </a>
+                </div>
+                <div class="col-12 col-md-6">
+                    <a href="consulta.php" class="boton-menu-grande">
+                        Consulta
+                    </a>
+                </div>
+                <div class="col-12 col-md-6">
+                    <a href="estadisticas.php" class="boton-menu-grande">
+                        Estadísticas
+                    </a>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="index.php" class="btn-regresar-menu">Regresar</a>
+            </div>
+        </div>
+    </main>
+
+    <div class="PIMarcaDeAgua">
+        <img src="ImagenEquipoNF.png">
     </div>
-</header>
-    <nav class="PPNavBar container py-4 d-flex justify-content-evenly">
-        <form class="row g-4">
-    <div class="col-12 col-md-6 d-flex">
-        <a href="admin/registroTrabajadores.php" class="boton card border-0 shadow-sm w-100 text-dark text-center p-3 link-offset-2 link-underline link-underline-opacity-0">
-            Registro trabajadores
-        </a>
-    </div>
-    <div class="col-12 col-md-6 d-flex">
-        <a href="registro.php" class="boton card border-0 shadow-sm w-100 text-dark text-center p-3 link-offset-2 link-underline link-underline-opacity-0">
-            Registro
-        </a>
-    </div>
-    <div class="col-12 col-md-6 d-flex">
-        <a href="estadisticas.php" class="boton card border-0 shadow-sm w-100 text-dark text-center p-3 link-offset-2 link-underline link-underline-opacity-0">
-            Estadísticas
-        </a>
-    </div>
-    <div class="col-12 col-md-6 d-flex">
-        <a href="consulta.php" class="boton card border-0 shadow-sm w-100 text-dark text-center p-3 link-offset-2 link-underline link-underline-opacity-0">
-            Consulta
-        </a>
-    </div>
-</form>
-    </nav>
-<div class="PIMarcaDeAgua">
-    <img src="ImagenEquipoNF.png">
-</div>
 </body>
 </html>

@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Color verde de fondo de la imagen */
+.bg-verde-principal {
+    background-color: #52c47d !important;
+}
+
+.PPHeader {
+    background: linear-gradient(to right, #20a383, #52c47d);
+    padding: 20px !important;
+}
+
+/* Estilo de los círculos rojos del header */
+.circulo-logo, .circulo-perfil {
+    background-color: #ff3131;
+    color: white;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 10px;
+    text-decoration: none;
+}
+
+/* Botón cerrar sesión ovalado */
+.btn-cerrar-sesion {
+    background-color: #ff3131;
+    color: white;
+    border-radius: 50px;
+    padding: 10px 30px;
+    border: none;
+    font-weight: 500;
+}
+
+.btn-cerrar-sesion:hover {
+    background-color: #d62828;
+    color: white;
+}
+
+/* Tarjeta Blanca del centro */
+.card-blanca-central {
+    background-color: white;
+    border-radius: 40px;
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Botones Rojos Grandes */
+.btn-menu-rojo {
+    background-color: #ff3131;
+    color: white;
+    font-size: 2.5rem;
+    padding: 25px;
+    border-radius: 30px;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-menu-rojo:hover {
+    background-color: #d62828;
+    color: white;
+    transform: translateY(-5px);
+}
+
+/* Marca de agua circular */
+.PIMarcaDeAgua img{
+    position:fixed;
+    bottom:0;
+    right:0;
+    width:120px;
+    opacity:0.7;
+}

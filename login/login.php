@@ -2,7 +2,7 @@
 session_start();
 require_once '../bd/conexion.php';
 
-$correo = $_POST['CorreoElectronico'] ?? '';
+$correo = $_POST['CorreoElectronico'] ?? 'error';
 $contrasena = $_POST['password'] ?? '';
 
 $consulta = $conexion->prepare(
