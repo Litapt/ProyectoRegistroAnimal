@@ -1,6 +1,6 @@
 <?php
 require_once 'login/check.php';
-require_rol('ADMINISTRADOR');
+require_rol('CENSADOR');
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -10,10 +10,9 @@ require_rol('ADMINISTRADOR');
     <title>Mi mascota Comondu</title>
     <link rel="icon" href="Imagen.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="pprincipal.css" />
+    <link rel="stylesheet" href="principalcensa.css" />
 </head>
 <body class="bg-verde-principal">
-
 <header class="position-relative d-flex align-items-center justify-content-between p-3 PPHeader text-white">
     <!-- Logos Izquierda -->
     <div class="d-flex align-items-center gap-3">
@@ -29,7 +28,9 @@ require_rol('ADMINISTRADOR');
     <!-- Acciones Derecha -->
     <div class="d-flex align-items-center gap-3">
         <a class="btn btn-cerrar-sesion" href="index.php">Cerrar sesion</a>
-        <a href="misDatos.php" class="circulo-perfil">Foto de perfil</a>
+        <a href="misDatos.php">
+            <img src="Imagen.png" class="rounded-circle" width="50">
+        </a>
     </div>
 </header>
 

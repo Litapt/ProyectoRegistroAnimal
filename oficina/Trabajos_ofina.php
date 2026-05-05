@@ -1,6 +1,6 @@
 <?php
 require_once 'login/check.php';
-require_rol('ADMINISTRADOR');
+require_rol('OFICINA');
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -10,7 +10,7 @@ require_rol('ADMINISTRADOR');
     <title>Mi mascota Comondu</title>
     <link rel="icon" href="Imagen.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="pprincipal.css" />
+    <link rel="stylesheet" href="Trabajos_oficina.css" />
 </head>
 <body class="bg-verde-principal">
 
@@ -29,7 +29,9 @@ require_rol('ADMINISTRADOR');
     <!-- Acciones Derecha -->
     <div class="d-flex align-items-center gap-3">
         <a class="btn btn-cerrar-sesion" href="index.php">Cerrar sesion</a>
-        <a href="misDatos.php" class="circulo-perfil">Foto de perfil</a>
+        <a href="misDatos.php">
+            <img src="Imagen.png" class="rounded-circle" width="50">
+        </a>
     </div>
 </header>
 
@@ -37,7 +39,7 @@ require_rol('ADMINISTRADOR');
     <!-- Tarjeta Blanca Central -->
     <div class="card-blanca-central p-5 shadow-lg">
         <div class="d-grid gap-4">
-            <a href="consultar_T.php" class="btn btn-menu-rojo">consultar</a>
+            <a href="consultar_T.php" class="btn btn-menu-rojo">Consultar</a>
             <a href="Estadistica_T.php" class="btn btn-menu-rojo">Estadistica </a>
         </div>
         

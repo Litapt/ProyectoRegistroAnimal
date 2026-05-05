@@ -55,7 +55,7 @@
             </div>
             <div class="input-group">
                 <label for="password">Contraseña</label>
-                <input type="password" id="password" name="password" minlength="8" required>
+                <input type="password" id="password" name="Password" minlength="8" required>
             </div>
             <a href="restablecerPsw.php" class="forgot">Olvide mi contraseña</a>
             <button class="btn-submit" type="submit">

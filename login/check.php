@@ -1,7 +1,7 @@
 <?php
 session_start();
 function require_login(){
-    if(!isset($_SESSION['username'])){
+    if(!isset($_SESSION['correo'])){
         header('Location: index.php?error=2');
         exit;
     }
