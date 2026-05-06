@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.PPHeader {
+    background: linear-gradient(to right, #20a383, #52c47d);
+}
+
+/* Estilos para los círculos de pasos */
+.paso-circulo {
+    width: 45px;
+    height: 45px;
+    background-color: #ff3131; /* Rojo de la imagen */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* El círculo negro para el paso actual */
+.paso-circulo.activo {
+    background-color: #000000;
+}
+
+/* Estilo para el texto Regresar abajo */
+.btn-regresar-centrado {
+    color: black;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-regresar-centrado:hover {
+    color: #333;
+}
+
+.btn-regresar-menu:hover {
+    background-color: #187a62;
+    opacity: 0.9;
+}
+
+.PIMarcaDeAgua img {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 120px;
+    opacity: 0.7;
+}
+
+.relleno {
+    margin-left: 50px;
+}
