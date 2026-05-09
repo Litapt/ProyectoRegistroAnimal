@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.PPHeader {
+    background: #4cc082; /* Color verde de fondo */
+    min-height: 120px;
+}
+
+.btn-tomar-foto {
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: black;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.btn-tomar-foto:hover {
+    opacity: 0.7;
+}
+
+/* Ajuste para que los inputs se vean limpios */
+.form-control {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+    padding-left: 10px;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-bottom: 2px solid purple;
+}
+
+.PIMarcaDeAgua img {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 120px;
+    opacity: 0.7;
+}
+
+.relleno {
+    margin-left: 50px;
+}
