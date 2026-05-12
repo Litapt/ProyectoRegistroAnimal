@@ -1,3 +1,7 @@
+<?php
+require_once 'login/check.php';
+require_rol('ADMINISTRADOR');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

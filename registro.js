@@ -1,22 +1,72 @@
-function mostrarRegistro(){
-    let form = document.getElementById("FUno"); /*Elemento completo*/
-    if(!form.checkValidity()){ /*Esta completo?*/
-        form.reportValidity();/*Esta correcto?*/
-        return; /*True/False */
+let rutaActual = [];
+let indicePaso = 0;
+
+function definirRuta(opcion) {
+    if (opcion === 'nueva') {
+        // Ruta Completa: Inicio -> Imagen 5 -> Imagen 2 -> Imagen 3 -> Imagen 4
+        rutaActual = ['paso-inicio', 'paso-ubicacion-nueva', 'paso-ubicacion-actual', 'paso-datos-dueno', 'paso-datos-animal'];
+    } else {
+        // Ruta Corta: Inicio -> Imagen 2 -> Imagen 3 -> Imagen 4
+        rutaActual = ['paso-inicio', 'paso-ubicacion-actual', 'paso-datos-dueno', 'paso-datos-animal'];
     }
-    let cantidad = document.getElementById("cantidad").value; /*Valor del elemento*/
-    let plantilla = document.getElementById("FDos");
-    let contenedor = document.querySelector(".Progreso");
-    for(let i = 0; i < cantidad; i++){ /*Dependiendo de el numero que haya en el elemento de id cantidad se va a repetir la funcion*/
-        let nuevo = plantilla.cloneNode(true);
-        nuevo.style.display = "block"; /*Aparece el formulario que estaba escondido*/
-        let titulo = nuevo.querySelector("h3");/*Aparece una etiqueta nueva de titulo*/
-        titulo.textContent = "REGISTRO DE ANIMAL " + (i+1); /*Se imprime el numero de registro dependiendo de el numero de "bucle" en el que va*/
-        contenedor.appendChild(nuevo);
+    avanzar(); // Salta al primer paso real de la ruta
+}
+
+function avanzar() {
+    const pasoActualId = rutaActual[indicePaso];
+    
+    // Validación: Solo avanzar si los inputs requeridos están llenos
+    const inputs = document.querySelectorAll(`#${pasoActualId} input[required], #${pasoActualId} select[required]`);
+    let esValido = true;
+    
+    inputs.forEach(input => {
+        if (!input.value.trim()) {
+            esValido = false;
+            input.classList.add('is-invalid');
+        } else {
+            input.classList.remove('is-invalid');
+        }
+    });
+
+    if (!esValido && indicePaso > 0) {
+        alert("Por favor, complete todos los campos obligatorios.");
+        return;
+    }
+
+    // Lógica de cambio de interfaz
+    if (indicePaso < rutaActual.length - 1) {
+        document.getElementById(rutaActual[indicePaso]).classList.replace('d-block', 'd-none');
+        indicePaso++;
+        document.getElementById(rutaActual[indicePaso]).classList.replace('d-none', 'd-block');
+        actualizarUI();
+    } else {
+        // Si es el último paso, el botón "Terminar" recarga a la Imagen 1
+        alert("Registro Finalizado");
+        location.reload();
     }
 }
 
-function iniciarMap(){
-  var coord = {lat:25.0440617, lng:-111.6392783};
-  var map = new google.maps.Map(document.getElementById("map"),{zoom:10,center:coord});
+function retroceder() {
+    if (indicePaso > 0) {
+        document.getElementById(rutaActual[indicePaso]).classList.replace('d-block', 'd-none');
+        indicePaso--;
+        document.getElementById(rutaActual[indicePaso]).classList.replace('d-none', 'd-block');
+        actualizarUI();
+    }
+}
+
+function actualizarUI() {
+    // Actualiza el texto del botón en el último paso
+    const btn = document.getElementById('btnSiguiente');
+    btn.innerText = (indicePaso === rutaActual.length - 1) ? "Terminar" : "Siguiente";
+
+    // Lógica de los círculos (Stepper)
+    // Paso 1 (Ubicación), Paso 2 (Dueño), Paso 3 (Animal)
+    let circuloActivo = 1;
+    if (rutaActual[indicePaso].includes('dueno')) circuloActivo = 2;
+    if (rutaActual[indicePaso].includes('animal')) circuloActivo = 3;
+
+    document.querySelectorAll('.paso-circulo').forEach((c, i) => {
+        c.classList.toggle('activo', (i + 1) === circuloActivo);
+    });
 }
