@@ -1,0 +1,2 @@
+use prabasededatos;
+SELECT animal.nombre, especies.nombre_especie, razas.nombre_raza, duenos.nombres FROM animal INNER JOIN razas ON animal.id_raza = razas.id INNER JOIN especies ON razas.id_especie = especies.id INNER JOIN duenos ON animal.id_dueno = duenos.id;
