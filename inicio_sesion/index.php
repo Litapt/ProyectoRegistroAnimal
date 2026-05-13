@@ -29,7 +29,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi mascota Comondú - Login</title>
-    <link rel="icon" href="Imagen.png" type="image/x-icon">
+    <link rel="icon" href="../imagenes/Imagen.png" type="image/x-icon">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -39,16 +39,16 @@
             <p>Registro animal del municipio de comondú</p>
         </div>
         <div class="header-logos">
-        <img src="Imagen.png" alt="Marca de agua" class="logo-img">
-        <img src="ecologia.png" alt="Logo de ecología" class="logo-img">
-        <img src="gobierno.png" alt="Logo del gobierno" class="logo-img">
+        <img src="../imagenes/Imagen.png" alt="Marca de agua" class="logo-img">
+        <img src="../imagenes/ecologia.png" alt="Logo de ecología" class="logo-img">
+        <img src="../imagenes/gobierno.png" alt="Logo del gobierno" class="logo-img">
 </div>
     </header>
     <main class="content">
-        <img src="Huella.Png" alt="animal" class="deco-left">
+        <img src="../imagenes/Huella.Png" alt="animal" class="deco-left">
         <div class="login-card">
             <h2>Inicio de sesion</h2>
-            <form action="login/login.php" method="post">
+            <form action="../login/login.php" method="post">
             <div class="input-group">
                 <label for="correo">Correo electrónico</label>
                 <input type="email" id="correo" name="CorreoElectronico" maxlength="100" required>
@@ -63,10 +63,10 @@
             </button>
         </form>
         </div>
-        <img src="Huella2.png" alt="huella" class="deco-right">
+        <img src="../imagenes/Huella2.png" alt="huella" class="deco-right">
     </main>
 <div class="PIMarcaDeAgua">
-    <img src="ImagenEquipoNF.png">
+    <img src="../imagenes/ImagenEquipoNF.png">
 </div>
 </body>
 </html>

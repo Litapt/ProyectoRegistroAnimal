@@ -14,17 +14,17 @@ $res = $consulta->get_result();
 $user = $res->fetch_assoc();
 
 if (!$user) {
-    header('Location: ../index.php?error=1');
+    header('Location: ../inicio_sesion/index.php?error=1');
     exit;
 }
 
 if ((int)$user['is_active'] === 0) {
-    header('Location: ../index.php?error=4');
+    header('Location: ../inicio_sesion/index.php?error=4');
     exit;
 }
 
 if ($contrasena !== $user['Password']) {
-    header('Location: ../index.php?error=1');
+    header('Location: ../inicio_sesion/index.php?error=1');
     exit;
 }
 /*if (!password_verify($contrasena, $user['Password'])) {
@@ -38,15 +38,15 @@ $_SESSION['ID'] = $user['ID'];
 
 
 if($user['role']=='ADMINISTRADOR'){
-        header('Location: ../pprincipal.php');
+        header('Location: ../admin/pprincipal.php');
         exit;
     }
 if($user['role']=='OFICINA'){
-        header('Location: ../Trabajos_ofina.php');
+        header('Location: ../oficina/Trabajos_oficina.php');
         exit;
 }
 if($user['role']=='CENSADOR'){
-        header('Location: ../principalCensador.php');
+        header('Location: ../censador/principalCensador.php');
         exit;
 }
 ?>

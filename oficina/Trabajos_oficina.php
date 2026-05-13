@@ -1,6 +1,6 @@
 <?php
 require_once '../login/check.php';
-require_rol('CENSADOR');
+require_rol('OFICINA');
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -10,7 +10,7 @@ require_rol('CENSADOR');
     <title>Mi mascota Comondu</title>
     <link rel="icon" href="../imagenes/Imagen.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="principalcensa.css" />
+    <link rel="stylesheet" href="Trabajos_oficina.css" />
 </head>
 <body class="bg-verde-principal">
 <header class="position-relative d-flex align-items-center justify-content-between p-3 PPHeader text-white">
@@ -25,9 +25,7 @@ require_rol('CENSADOR');
     </div>
     <!-- Acciones Derecha -->
     <div class="d-flex align-items-center gap-3">
-        <a class="btn btn-cerrar-sesion" href="../inicio_sesion/index.php">
-            Cerrar sesion
-        </a>
+        <a class="btn btn-cerrar-sesion" href="../inicio_sesion/index.php">Cerrar sesion</a>
         <a href="../accesosgral/misDatos.php">
             <img src="../imagenes/Imagen.png" class="rounded-circle" width="50">
         </a>
@@ -37,11 +35,11 @@ require_rol('CENSADOR');
     <!-- Tarjeta Blanca Central -->
     <div class="card-blanca-central p-5 shadow-lg">
         <div class="d-grid gap-4">
-            <a href="registro_C.php" class="btn btn-menu-rojo">
-                Registro
-            </a>
-            <a href="consulta_C.php" class="btn btn-menu-rojo">
+            <a href="../consultar_T.php" class="btn btn-menu-rojo">
                 Consultar
+            </a>
+            <a href="../Estadistica_T.php" class="btn btn-menu-rojo">
+                Estadistica
             </a>
         </div>
         
@@ -50,6 +48,7 @@ require_rol('CENSADOR');
         </div>
     </div>
 </main>
+
 <div class="PIMarcaDeAgua">
     <div href="../imagenes/ImagenEquipoNF.png"></div>
 </div>
