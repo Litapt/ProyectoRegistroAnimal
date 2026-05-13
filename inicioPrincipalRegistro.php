@@ -51,7 +51,7 @@ require_rol('ADMINISTRADOR');
             </div>
 
             <div id="paso-ubicacion-nueva" class="card-registro shadow d-none">
-                <?php include 'Registro_dueños2.php'; ?>
+                <?php include 'Registro_dueños1.php'; ?>
             </div>
 
             <div id="paso-ubicacion-actual" class="card-registro shadow d-none">
@@ -59,7 +59,7 @@ require_rol('ADMINISTRADOR');
             </div>
 
             <div id="paso-datos-dueno" class="card-registro shadow d-none">
-                <?php include 'Registro_dueños1.php'; ?>
+                <?php include 'Registro_dueños2.php'; ?>
             </div>
 
             <div id="paso-datos-animal" class="card-registro shadow d-none">
@@ -69,6 +69,6 @@ require_rol('ADMINISTRADOR');
         </form>
     </main>
 
-    <script src="registro_stepper.js"></script>
+    <script src="registro.js"></script>
 </body>
 </html>

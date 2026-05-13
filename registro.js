@@ -1,17 +1,11 @@
 let rutaActual = [];
 let indicePaso = 0;
-
 function definirRuta(opcion) {
-    if (opcion === 'nueva') {
-        // Ruta Completa: Inicio -> Imagen 5 -> Imagen 2 -> Imagen 3 -> Imagen 4
-        rutaActual = ['paso-inicio', 'paso-ubicacion-nueva', 'paso-ubicacion-actual', 'paso-datos-dueno', 'paso-datos-animal'];
-    } else {
-        // Ruta Corta: Inicio -> Imagen 2 -> Imagen 3 -> Imagen 4
-        rutaActual = ['paso-inicio', 'paso-ubicacion-actual', 'paso-datos-dueno', 'paso-datos-animal'];
-    }
-    avanzar(); // Salta al primer paso real de la ruta
+    indicePaso = 0;
+    if (opcion === 'nueva') {rutaActual = ['paso-inicio', 'paso-ubicacion-nueva', 'paso-datos-dueno', 'paso-datos-animal'];
+    } else {rutaActual = ['paso-inicio','paso-ubicacion-actual','paso-datos-dueno','paso-datos-animal'];}
+    avanzar();
 }
-
 function avanzar() {
     const pasoActualId = rutaActual[indicePaso];
     
@@ -45,7 +39,6 @@ function avanzar() {
         location.reload();
     }
 }
-
 function retroceder() {
     if (indicePaso > 0) {
         document.getElementById(rutaActual[indicePaso]).classList.replace('d-block', 'd-none');
@@ -54,7 +47,6 @@ function retroceder() {
         actualizarUI();
     }
 }
-
 function actualizarUI() {
     // Actualiza el texto del botón en el último paso
     const btn = document.getElementById('btnSiguiente');
