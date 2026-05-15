@@ -9,9 +9,15 @@ require_rol('ADMINISTRADOR');
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mi mascota Comondu</title>
     <link rel="icon" href="../pryecto_perros/imagenes/Imagen.png" type="image/x-icon">
-    <link rel="stylesheet" href="pprincipal.css" />
+    <link rel="stylesheet" src="admin/pprincipal.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        #mapNuevo {
+            height: 500px;
+            width: 100%;
+        }
+    </style>
 </head>
 <body class="bg-success-subtle">
     <main class="container py-4">
@@ -20,7 +26,7 @@ require_rol('ADMINISTRADOR');
             <div class="row g-4">
                 <div class="col-md-6">
                     <div class="contenedor-mapa d-flex align-items-center justify-content-center rounded-3">
-                        <span class="fs-4 fw-bold">MAPA</span>
+                        <div class="fs-4 fw-bold" id="mapNuevo"></div>
                     </div>
                 </div>
                 <!-- Formulario -->
@@ -50,7 +56,9 @@ require_rol('ADMINISTRADOR');
             </div>
     </main>
     <div class="PIMarcaDeAgua">
-        <img src="ImagenEquipoNF.png">
+        <img src="imagenes/ImagenEquipoNF.png">
     </div>
+        <script>
+</script>
 </body>
 </html>
