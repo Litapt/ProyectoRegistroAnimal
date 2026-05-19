@@ -12,23 +12,12 @@ require_rol('ADMINISTRADOR');
     <link rel="stylesheet" src="admin/pprincipal.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <style>
-        #mapNuevo {
-            height: 500px;
-            width: 100%;
-        }
-    </style>
 </head>
 <body class="bg-success-subtle">
     <main class="container py-4">
             <h2 class="fw-bold mb-4">Registrar ubicación nueva</h2>
             
             <div class="row g-4">
-                <div class="col-md-6">
-                    <div class="contenedor-mapa d-flex align-items-center justify-content-center rounded-3">
-                        <div class="fs-4 fw-bold" id="mapNuevo"></div>
-                    </div>
-                </div>
                 <!-- Formulario -->
                 <div class="col-md-6">
                     <div class="d-flex flex-column gap-3">

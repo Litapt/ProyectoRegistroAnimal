@@ -9,7 +9,7 @@ require_rol('ADMINISTRADOR');
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mi mascota Comondu</title>
     <link rel="icon" href="../imagenes/Imagen.png" type="image/x-icon">
-    <link rel="stylesheet" href="pprincipal.css" />
+    <link rel="stylesheet" href="../css/pprincipal.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </head>
 <body class="bg-success-subtle">
@@ -56,14 +56,8 @@ require_rol('ADMINISTRADOR');
                     </a>
                 </div>
             </div>
-            <div class="text-center mt-5">
-                <a href="../inicio_sesion/index.php" class="btn-regresar-menu">
-                    Regresar
-                </a>
-            </div>
         </div>
     </main>
-
     <div class="PIMarcaDeAgua">
         <img src="../imagnes/ImagenEquipoNF.png">
     </div>

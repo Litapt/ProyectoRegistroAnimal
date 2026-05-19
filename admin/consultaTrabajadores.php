@@ -8,8 +8,8 @@
 <body class="bg-success-subtle">
     <header class="position-relative d-flex align-items-center justify-content-between p-3 PPHeader text-white">
     <div class="d-flex align-items-center gap-2">
-        <img src="Imagen.png" class="rounded-circle" width="50">
-        <img src="Imagen.png" class="rounded-circle" width="50">
+        <img src="../imagenes/Imagen.png" class="rounded-circle" width="50">
+        <img src="../imagenes/Imagen.png" class="rounded-circle" width="50">
     </div>
     <div class="position-absolute top-50 start-50 translate-middle text-center">
         <h4 class="mb-0">Mi mascota Comondú</h4>
@@ -20,8 +20,8 @@
             Cerrar sesion
         </a>
         <button class="btn">
-            <a href="misDatos.php">
-            <img src="Imagen.png" class="rounded-circle" width="50">
+            <a href="../accessogral/misDatos.php">
+            <img src="../imagenes/Imagen.png" class="rounded-circle" width="50">
             </a>
         </button>
     </div>

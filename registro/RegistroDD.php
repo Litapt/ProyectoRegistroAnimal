@@ -16,13 +16,6 @@ require_rol('ADMINISTRADOR');
 <body class="bg-success-subtle">
     <main class="container py-4">
             <div class="row g-4 align-items-center">
-                <div class="col-md-6 text-center">
-                    <div class="foto-dueno-circulo d-flex align-items-center justify-content-center mx-auto mb-3">
-                        <img src="imagenes/Imagen.png" class="rounded-circle" width="80">
-                    </div>
-                    <button class="btn-tomar-foto">Tomar foto</button>
-                </div>
-
                 <div class="col-md-6">
                     <div class="d-flex flex-column gap-3">
                         <div class="input-group-custom">

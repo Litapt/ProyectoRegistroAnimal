@@ -14,15 +14,15 @@ require_rol('ADMINISTRADOR');?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro trabajadores</title>
     <link rel="icon" href="../Imagen.png" type="image/x-icon">    
-    <link rel="stylesheet" href="../registroTrabajadores.css">
+    <link rel="stylesheet" href="../css/registroTrabajadores.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="bg-success-subtle vh-100">
     <header class="position-relative d-flex align-items-center justify-content-between p-3 main-header text-white">
         <div class="d-flex gap-2">
-            <img src="../ecologia.png" class="logo-img">
-            <img src="../gobierno.png" class="logo-img">
+            <img src="../imagenes/ecologia.png" class="logo-img">
+            <img src="../imagesnes/gobierno.png" class="logo-img">
         </div>
         <div class="position-absolute top-50 start-50 translate-middle text-center">
             <h4 class="mb-0">
@@ -34,7 +34,7 @@ require_rol('ADMINISTRADOR');?>
         </div>
         <div>
             <a href="misDatos.html">
-                <img src="../Imagen.png" alt="Logo" class="logo-img">
+                <img src="../imagenes/Imagen.png" alt="Logo" class="logo-img">
             </a>
         </div>
     </header>
@@ -100,7 +100,7 @@ require_rol('ADMINISTRADOR');?>
             </form>
         </div>
     </main>
-    <script src="../registrotrabajadores.js"> </script>
+    <script src="../javascript/registrotrabajadores.js"> </script>
 <div class="PIMarcaDeAgua">
     <img src="../ImagenEquipoNF.png">
 </div>

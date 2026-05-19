@@ -7,10 +7,10 @@ require_rol('ADMINISTRADOR');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro mascotas - Stepper</title>
-    <link rel="stylesheet" href="registro.css">
-    <link rel="stylesheet" href="Registro_dueños.css">
-    <link rel="stylesheet" href="Registro_dueños1.css">
+    <title>Registro mascotas</title>
+    <link rel="stylesheet" href="css/registro.css">
+    <link rel="stylesheet" href="css/Registro_dueños.css">
+    <link rel="stylesheet" href="css/Registro_dueños1.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="bg-success-subtle vh-100 d-flex flex-column">
@@ -46,23 +46,25 @@ require_rol('ADMINISTRADOR');
                 </div>
             </div> 
             <div id="paso-ubicacion-nueva" class="card-registro shadow d-none">
-                <?php include 'Registro_dueños1.php'; ?>
+                <?php include 'UbicacionNueva.php'; ?>
             </div>
 
             <div id="paso-ubicacion-actual" class="card-registro shadow d-none">
-                <?php include 'Registro_dueños.php'; ?>
+                <?php include 'UbicacionActual.php'; ?>
             </div>
 
             <div id="paso-datos-dueno" class="card-registro shadow d-none">
-                <?php include 'Registro_dueños2.php'; ?>
+                <?php include 'RegistroDD.php'; ?>
             </div>
 
             <div id="paso-datos-animal" class="card-registro shadow d-none">
                 <?php include 'RegistroAnimal.php'; ?>
             </div>
-
+            <div id="paso-elegir-animal" class="card-registro shadow d-none">
+                <?php include 'RegistroMascotas.php'?>
+            </div>
         </form>
     </main>
-    <script src="registro.js"></script>
+    <script src="javascript/registro.js"></script>
 </body>
 </html>

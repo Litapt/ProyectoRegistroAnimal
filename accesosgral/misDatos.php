@@ -9,7 +9,7 @@ require_once 'misDatosCons.php';
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Mis Datos - Comondú</title>
         <link rel="icon" href="Imagen.png" type="image/x-icon">
-        <link rel="stylesheet" href="misDatos.css" />
+        <link rel="stylesheet" href="../css/misDatos.css" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -59,7 +59,7 @@ require_once 'misDatosCons.php';
     </header>
     <main class="container-fluid px-5 mt-4">
         <div class="mb-3">
-            <a href="pprincipal.html" class="btn-back">
+            <a href="../admin/pprincipal.php" class="btn-back">
                 <img src="https://cdn-icons-png.flaticon.com/512/507/507257.png"
                     width="40"
                     alt="Volver">

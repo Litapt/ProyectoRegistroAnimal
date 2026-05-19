@@ -2,8 +2,8 @@ let rutaActual = [];
 let indicePaso = 0;
 function definirRuta(opcion) {
     indicePaso = 0;
-    if (opcion === 'nueva') {rutaActual = ['paso-inicio', 'paso-ubicacion-nueva', 'paso-datos-dueno', 'paso-datos-animal'];
-    } else {rutaActual = ['paso-inicio','paso-ubicacion-actual','paso-datos-dueno','paso-datos-animal'];}
+    if (opcion === 'nueva') {rutaActual = ['paso-inicio', 'paso-ubicacion-nueva', 'paso-datos-dueno', 'paso-elegir-animal','paso-datos-animal'];
+    } else {rutaActual = ['paso-inicio','paso-ubicacion-actual','paso-datos-dueno','paso-elegir-animal','paso-datos-animal'];}
     avanzar();
 }
 function avanzar() {

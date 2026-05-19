@@ -27,79 +27,43 @@
                 <option value="*">
                     Selecciona especie...
                 </option>
-                <option value="canino">
+                <option value="Canino">
                     Canino
                 </option>
-                <option value="felino">
+                <option value="Felino">
                     Felino
                 </option>
-                <option value="aves">
-                    Aves
+                <option value="Ave">
+                    Ave
                 </option>
-                <option value="peces">
+                <option value="Reptil">
+                    Reptil
+                </option>
+                <option value="Roedor">
+                    Roedor
+                </option>
+                <option value="Granja">
+                    Granja
+                </option>
+                <option value="Peces">
                     Peces
                 </option>
-                <option value="anfibios">
-                    Anfibios
-                </option>
-                <option value="reptiles">
-                    Reptiles
-                </option>
-                <option value="invertebrados">
-                    Invertebrados
+                <option value="Anfibio">
+                    Anfibio
                 </option>
             </select><hr>
-                <label for="Raza">Raza*</label>
-                <!--RAZAS estan pendientes hasta la base de datos-->
-                <select id="Raza" name="Raza" require>
-                    <option value="*">
-                        Selecciona raza...
-                    </option>
+            <label for="Raza">Raza*</label>
+            <!--RAZAS estan pendientes hasta la base de datos-->
+            <!--INVESTIGAR SI LAS RAZAS SE PUEDEN JALAR DE LA BASE DE DATOS-->
+            <select id="Raza" name="Raza" require>
+                <option value="*">
+                    Selecciona raza...
+                </option>
             </select><hr>
             <label for="Sexo">Peso*</label>
             <input type="number" id="Peso" name="Peso" placeholder="En kilogramos" required><hr>
             <label for="Color">Color</label>
-            <select name="Color" id="Color" required>
-                <option value="*">
-                    Selecciona color...
-                </option>
-                <option value="negro">
-                    Negro
-                </option>
-                <option value="blanco">
-                    Blanco
-                </option>
-                <option value="gris">
-                    Gris
-                </option>
-                <option value="marron">
-                    Marron
-                </option>
-                <option value="rojo">
-                    Rojo
-                </option>
-                <option value="azul">
-                    Azul
-                </option>
-                <option value="verde">
-                    Verde
-                </option>
-                <option value="amarillo">
-                    Amarillo
-                </option>
-                <option value="naranja">
-                    Naranja
-                </option>
-                <option value="rosa">
-                    Rosa
-                </option>
-                <option value="cafe">
-                    Cafe
-                </option>
-                <option value="plateado">
-                    Plateado
-                </option> 
-            </select><hr>
+            <input type="text" id="Color" required><hr>
             <label for="Sexo">Sexo*</label>
             <label for="Macho">Macho</label>
             <input type="radio" id="Sexo" name="Sexo" value="Macho"><hr>

@@ -36,17 +36,12 @@ $_SESSION['correo'] = $user['CorreoElectronico'];
 $_SESSION['role'] = $user['role'];
 $_SESSION['ID'] = $user['ID'];
 
-
 if($user['role']=='ADMINISTRADOR'){
         header('Location: ../admin/pprincipal.php');
         exit;
     }
-if($user['role']=='OFICINA'){
-        header('Location: ../oficina/Trabajos_oficina.php');
-        exit;
-}
-if($user['role']=='CENSADOR'){
-        header('Location: ../censador/principalCensador.php');
+if($user['role']=='CAPTURISTA'){
+        header('Location: ../capturista/principalCensador.php');
         exit;
 }
 ?>
