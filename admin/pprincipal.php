@@ -36,7 +36,7 @@ require_rol('ADMINISTRADOR');
         <div class="bg-white p-4 p-md-5 rounded-5 shadow-lg w-100" style="max-width: 1000px;">
             <div class="row g-4">
                 <div class="col-12 col-md-6">
-                    <a href="../inicioPrincipalRegistro.php" class="boton-menu-grande">
+                    <a href="../registro/inicioPrincipalRegistro.php" class="boton-menu-grande">
                         Registro
                     </a>
                 </div>
