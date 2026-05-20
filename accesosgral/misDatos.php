@@ -49,7 +49,7 @@ require_once 'misDatosCons.php';
             </p>
         </div>
         <div class="d-flex align-items-center gap-3">
-            <a href="index.php" class="btn btn-danger rounded-pill px-4">
+            <a href="../index.php" class="btn btn-danger rounded-pill px-4">
                 Cerrar sesion
             </a>
             <div class="header-circle profile">

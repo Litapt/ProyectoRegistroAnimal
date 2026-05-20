@@ -1,64 +1,54 @@
-let rutaActual = [];
-let indicePaso = 0;
-function definirRuta(opcion) {
-    indicePaso = 0;
-    if (opcion === 'nueva') {rutaActual = ['paso-inicio', 'paso-ubicacion-nueva', 'paso-datos-dueno', 'paso-elegir-animal','paso-datos-animal'];
-    } else {rutaActual = ['paso-inicio','paso-ubicacion-actual','paso-datos-dueno','paso-elegir-animal','paso-datos-animal'];}
-    avanzar();
-}
-function avanzar() {
-    const pasoActualId = rutaActual[indicePaso];
-    
-    // Validación: Solo avanzar si los inputs requeridos están llenos
-    const inputs = document.querySelectorAll(`#${pasoActualId} input[required], #${pasoActualId} select[required]`);
-    let esValido = true;
-    
-    inputs.forEach(input => {
-        if (!input.value.trim()) {
-            esValido = false;
-            input.classList.add('is-invalid');
-        } else {
-            input.classList.remove('is-invalid');
+document.addEventListener('DOMContentLoaded', () => {
+    //Seleccion de elementos de html
+    const progress=document.querySelector('.progreso');
+    const stepIndicators=document.querySelectorAll('.contenedor-progreso li');
+    const anterior=document.querySelector('.anterior');
+    const siguiente=document.querySelector('.siguiente');
+    const completar=document.querySelector('.completar');
+
+    //Seleccion de propiedades css
+    document.documentElement.style.setProperty("--steps", stepIndicators.length);
+
+    //Se "esconde la linea de seleccion"
+    let currentStep=0;
+
+    anterior.addEventListener("click", (e)=>{
+        //Por si el tipo de boton no se espeficia se le da el tipo de submit
+        e.preventDefault();
+
+        if(currentStep>0){
+            currentStep--;
+            updateProgress();
         }
     });
 
-    if (!esValido && indicePaso > 0) {
-        alert("Por favor, complete todos los campos obligatorios.");
-        return;
-    }
+    siguiente.addEventListener("click", (e)=>{
+        //Por si el tipo de boton no se espeficia se le da el tipo de submit
+        e.preventDefault();
 
-    // Lógica de cambio de interfaz
-    if (indicePaso < rutaActual.length - 1) {
-        document.getElementById(rutaActual[indicePaso]).classList.replace('d-block', 'd-none');
-        indicePaso++;
-        document.getElementById(rutaActual[indicePaso]).classList.replace('d-none', 'd-block');
-        actualizarUI();
-    } else {
-        // Si es el último paso, el botón "Terminar" recarga a la Imagen 1
-        alert("Registro Finalizado");
-        location.reload();
-    }
-}
-function retroceder() {
-    if (indicePaso > 0) {
-        document.getElementById(rutaActual[indicePaso]).classList.replace('d-block', 'd-none');
-        indicePaso--;
-        document.getElementById(rutaActual[indicePaso]).classList.replace('d-none', 'd-block');
-        actualizarUI();
-    }
-}
-function actualizarUI() {
-    // Actualiza el texto del botón en el último paso
-    const btn = document.getElementById('btnSiguiente');
-    btn.innerText = (indicePaso === rutaActual.length - 1) ? "Terminar" : "Siguiente";
-
-    // Lógica de los círculos (Stepper)
-    // Paso 1 (Ubicación), Paso 2 (Dueño), Paso 3 (Animal)
-    let circuloActivo = 1;
-    if (rutaActual[indicePaso].includes('dueno')) circuloActivo = 2;
-    if (rutaActual[indicePaso].includes('animal')) circuloActivo = 3;
-
-    document.querySelectorAll('.paso-circulo').forEach((c, i) => {
-        c.classList.toggle('activo', (i + 1) === circuloActivo);
+        if(currentStep<stepIndicators.length-1){
+            currentStep++;
+            updateProgress();
+        }
     });
-}
+
+    //Funcion progreso de los pasos respecto a los botones
+    const updateProgress=()=>{
+        let width=currentStep / (stepIndicators.length -1);
+        progress.style.transform = `scaleX(${width})`;
+        stepIndicators.forEach((indicators, index)=>{
+            indicators.classList.toggle('ds', currentStep === index);
+            indicators.classList.toggle('dn', currentStep > index);
+        });
+        updateButtons();
+    }
+
+    const updateButtons = () =>{
+        anterior.hidden=currentStep===0;
+        siguiente.hidden=currentStep>=stepIndicators.length-1;
+        completar.hidden=!siguiente.hidden;
+    };
+
+    updateProgress();
+
+});
