@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     //Seleccion de elementos de html
     const progress=document.querySelector('.progreso');
+    const steps=document.querySelectorAll('.step');
     const stepIndicators=document.querySelectorAll('.contenedor-progreso li');
     const anterior=document.querySelector('.anterior');
     const siguiente=document.querySelector('.siguiente');
@@ -39,6 +40,10 @@ document.addEventListener('DOMContentLoaded', () => {
         stepIndicators.forEach((indicators, index)=>{
             indicators.classList.toggle('ds', currentStep === index);
             indicators.classList.toggle('dn', currentStep > index);
+        });
+        steps.forEach((step, index)=>{
+            step.style.transform=`translateX(-${currentStep * 100}%)`;
+            step.classList.toggle('ds', currentStep === index);
         });
         updateButtons();
     }

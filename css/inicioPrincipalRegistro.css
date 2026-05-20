@@ -172,3 +172,17 @@ button[type="submit"]:hover, button[type="submit"]:active{
     flex:1;
 }
 
+.pasos-contenedor{
+    display:flex;
+    overflow: hidden;
+}
+
+.step.ds{
+    opacity: 1;
+}
+
+.step{
+    flex:1 0 100%;
+    padding: 24px 8px;
+    opacity: 0;
+}
