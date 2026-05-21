@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     //Seleccion de elementos de html
     const progress=document.querySelector('.progreso');
+    const stepsContainer=document.querySelector('.pasos-contenedor');
     const steps=document.querySelectorAll('.step');
     const stepIndicators=document.querySelectorAll('.contenedor-progreso li');
     const anterior=document.querySelector('.anterior');
@@ -37,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const updateProgress=()=>{
         let width=currentStep / (stepIndicators.length -1);
         progress.style.transform = `scaleX(${width})`;
+        stepsContainer.style.height=steps[currentStep].offsetHeight + "px";
         stepIndicators.forEach((indicators, index)=>{
             indicators.classList.toggle('ds', currentStep === index);
             indicators.classList.toggle('dn', currentStep > index);

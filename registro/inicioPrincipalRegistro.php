@@ -48,32 +48,142 @@ require_rol('ADMINISTRADOR');
 
             <div class="pasos-contenedor">
                 <div class="step">
-                    <h3>Direccion</h3>
-                    <p>
-                        abcdefghijklmnopqrstuvwxyz
-                    </p>
-                    <p>
-                        abcdefghijklmnopqrstuvwxyz
-                    </p>
-                    <p>
-                        abcdefghijklmnopqrstuvwxyz
-                    </p>
-                    <p>
-                        abcdefghijklmnopqrstuvwxyz
-                    </p>
-                    
+                    <h3>
+                        Direccion
+                    </h3>
+                    <form>
+                        <label class="label-purple">Ciudad</label>
+                        <input type="text" class="form-control" placeholder="Agregar texto" required>
+                        <label for="colonia">Colonia</label>
+                        <select id="Especie" name="Especie"  class="form-control" required>
+                            <option value="*">
+                                Selecciona especie...
+                            </option>
+                            <option value="centro">
+                                Centro
+                            </option>
+                            <option value="pueblonuevo">
+                                Pueblo Nuevo
+                            </option>
+                            <option value="infonavitsanmartin">
+                                Infonavit San Martín
+                            </option>
+                            <option value="infonavitguaycura">
+                                Infonavit Guaycura
+                            </option>
+                            <option value="pioneros">
+                                Pioneros
+                            </option>
+                            <option value="pionerosII">
+                                Pioneros II
+                            </option>
+                            <option value="universidad">
+                                Universidad
+                            </option>
+                            <option value="magisterial">
+                                Magisterial
+                            </option>
+                            <option value="esperanza">
+                                Esperanza
+                            </option>
+                            <option value="4demarzo">
+                                4 de Marzo
+                            </option>
+                            <option value="ladrillera">
+                                Ladrillera
+                            </option>
+                            <option value="lienzocharro">
+                                Lienzo Charro
+                            </option>
+                            <option value="juandominguezcota">
+                                Juan Dominguez Cota
+                            </option>
+                            <option value="agricultorINDECO">
+                                Agricultor INDECO
+                            </option>
+                        </select>
+                        <label class="label-purple">Calle principal</label>
+                        <input type="text" class="form-control" placeholder="Agregar texto" required>
+                        <label class="label-purple">Calle adyacente</label>
+                        <input type="text" class="form-control" placeholder="Agregar texto" required>
+                        <label class="label-purple">Numero externo</label>
+                        <input type="text" class="form-control" placeholder="Agregar texto">
+                        <label class="label-purple">Numero interno</label>
+                        <input type="text" class="form-control" placeholder="Agregar texto">
+                        <label class="label-purple">Codigo postal</label>
+                        <input type="text" class="form-control" placeholder="Agregar texto">
+                    </form>
                 </div>
                 <div class="step">
-                    <h3>Dueño(s)</h3>
-                    <p>
-                        abcdefghijklmnopqrstuvwxyz
-                    </p>
+                    <h3>
+                        Dueño(s)
+                    </h3>
+                    <label class="label-purple">Nombre</label>
+                    <input type="text" class="form-control" placeholder="Agregar texto">
+                    <label class="label-purple">Apellido paterno</label>
+                    <input type="text" class="form-control" placeholder="Agregar texto">
+                    <label class="label-purple">Apellido materno</label>
+                    <input type="text" class="form-control" placeholder="Agregar texto">
+                    <label class="label-purple">CURP</label>
+                    <input type="text" class="form-control" placeholder="Agregar texto">
+                    <label class="label-purple">Telefono</label>
+                    <input type="text" class="form-control" placeholder="Agregar texto">
                 </div>
                 <div class="step">
-                    <h3>Mascotas</h3>
-                    <p>
-                        abcdefghijklmnopqrstuvwxyz
-                    </p>
+                    <h3>
+                        Mascotas
+                    </h3>
+                    <label class="label-purple">Nombre del animal</label>
+                    <input type="text" class="form-control" placeholder="Agregar texto" required>
+                    <label class="label-purple">Especie</label>
+                    <select id="Especie" name="Especie" class="form-control" require>
+                        <option value="*">
+                            Selecciona especie...
+                        </option>
+                        <option value="Canino">
+                            Canino
+                        </option>
+                        <option value="Felino">
+                            Felino
+                        </option>
+                        <option value="Ave">
+                            Ave
+                        </option>
+                        <option value="Reptil">
+                            Reptil
+                        </option>
+                        <option value="Roedor">
+                            Roedor
+                        </option>
+                        <option value="Granja">
+                            Granja
+                        </option>
+                        <option value="Peces">
+                            Peces
+                        </option>
+                        <option value="Anfibio">
+                            Anfibio
+                        </option>
+                    </select>
+                    <label class="label-purple">Raza</label>   
+                    <!--RAZAS estan pendientes hasta la base de datos-->
+                    <!--INVESTIGAR SI LAS RAZAS SE PUEDEN JALAR DE LA BASE DE DATOS-->
+                    <select id="Especie" name="Especie" class="form-control" required>
+                        <option value="*">
+                            Selecciona especie...
+                        </option>
+                    </select>      
+                    <label class="label-purple">Peso</label>
+                    <input type="text" class="form-control" placeholder="Agregar texto" required>
+                    <label class="label-purple">Color</label>
+                    <input type="text" class="form-control" placeholder="Agregar texto" required>
+                    <label class="label-purple h-100">Sexo</label>
+                    <div class="">
+                        <label class="label-purple">Macho</label>
+                        <input type="radio" id="Sexo" name="Sexo" value="Macho" class="form-check" required>
+                        <label class="label-purple">Hembra</label>
+                        <input type="radio" id="Sexo" name="Sexo" value="Hembra" class="form-check" required>
+                    </div>
                 </div>
             </div>
             <div class="control">
