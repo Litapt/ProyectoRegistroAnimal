@@ -46,7 +46,7 @@ require_rol('ADMINISTRADOR');
                     </a>
                 </div>
                 <div class="col-12 col-md-6">
-                    <a href="../consulta.php" class="boton-menu-grande">
+                    <a href="../consultas/consultas.php" class="boton-menu-grande">
                         Consulta
                     </a>
                 </div>

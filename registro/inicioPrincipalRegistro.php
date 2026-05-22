@@ -1,6 +1,5 @@
 <?php
 require_once '../login/check.php';
-require_rol('ADMINISTRADOR');
 require_once '../bd/conexion.php';
 $resultadoCiudades = $conexion->query("
     SELECT id, nombre_ciudad, municipio, estado, pais

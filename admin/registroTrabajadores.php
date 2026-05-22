@@ -84,7 +84,7 @@ require_rol('ADMINISTRADOR');?>
                     </label>
                     <select id="rol" name="rol" required class="form-select">
                         <option value="">Selecciona...</option>
-                        <option value="OFICINA">Oficina</option>
+                        <option value="CAPTURISTA">Capturista</option>
                         <option value="ADMINISTRADOR">Administrador</option>
                     </select>
                 </div>

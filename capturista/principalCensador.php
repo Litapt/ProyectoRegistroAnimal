@@ -37,10 +37,10 @@ require_rol('CAPTURISTA');
     <!-- Tarjeta Blanca Central -->
     <div class="card-blanca-central p-5 shadow-lg">
         <div class="d-grid gap-4">
-            <a href="registro_C.php" class="btn btn-menu-rojo">
+            <a href="../registro/inicioPrincipalRegistro.php" class="btn btn-menu-rojo">
                 Registro
             </a>
-            <a href="consulta_C.php" class="btn btn-menu-rojo">
+            <a href="../consultas/consultasCapturista.php" class="btn btn-menu-rojo">
                 Consultar
             </a>
         </div>

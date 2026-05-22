@@ -1,17 +1,14 @@
 <?php
 require_once '../login/check.php';
-require_rol('ADMINISTRADOR');
-
+require_rol('CAPTURISTA');
 require_once 'consultasDatos.php';
 ?>
-
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consultas - Mi Mascota Comondú</title>
+    <title>Consultas Capturista - Mi Mascota Comondú</title>
     <link rel="icon" href="../imagenes/Imagen.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/misdatos.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -57,7 +54,7 @@ require_once 'consultasDatos.php';
 
         <div class="text-center flex-grow-1">
             <h1 class="fw-bold mb-0">Mi mascota Comondú</h1>
-            <p class="mb-0">Registro animal del municipio de Comondú</p>
+            <p class="mb-0">Consultas del capturista</p>
         </div>
 
         <div class="d-flex align-items-center gap-3">
@@ -92,14 +89,10 @@ require_once 'consultasDatos.php';
                         Cargar animales
                     </button>
 
-                    <button type="button" class="btn-sidebar btn-consulta" data-target="trabajadores">
-                        Cargar trabajadores
-                    </button>
-
                 </div>
 
                 <div class="mt-auto w-100 text-center">
-                    <a href="../admin/pprincipal.php" class="text-decoration-none text-dark fw-bold fs-3">
+                    <a href="../capturista/principalCapturista.php" class="text-decoration-none text-dark fw-bold fs-3">
                         Regresar
                     </a>
                 </div>
@@ -290,93 +283,15 @@ require_once 'consultasDatos.php';
                                                 No hay animales registrados.
                                             </td>
                                         </tr>
-
                                     <?php endif; ?>
-
                                 </tbody>
-
                             </table>
-
                         </div>
-
                     </div>
-
-                    <div id="consulta-trabajadores" class="consulta-tabla d-none">
-
-                        <h3 class="mb-3">Trabajadores registrados</h3>
-
-                        <div class="table-responsive">
-
-                            <table class="table table-striped table-hover align-middle">
-
-                                <thead class="table-success">
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>Nombre</th>
-                                        <th>CURP</th>
-                                        <th>Correo</th>
-                                        <th>Rol</th>
-                                        <th>Fecha de registro</th>
-                                    </tr>
-                                </thead>
-
-                                <tbody>
-
-                                    <?php if ($datosTrabajadores && $datosTrabajadores->num_rows > 0): ?>
-
-                                        <?php while ($trabajador = $datosTrabajadores->fetch_assoc()): ?>
-
-                                            <tr
-                                                class="fila-click"
-                                                onclick="window.location.href='detalleTrabajador.php?id=<?= $trabajador['ID'] ?>'">
-
-                                                <td><?= limpiar($trabajador['ID']) ?></td>
-
-                                                <td>
-                                                    <?= limpiar($trabajador['Nombre']) ?>
-                                                    <?= limpiar($trabajador['ApellidoPaterno']) ?>
-                                                    <?= limpiar($trabajador['ApellidoMaterno']) ?>
-                                                </td>
-
-                                                <td><?= limpiar($trabajador['CURP']) ?></td>
-
-                                                <td><?= limpiar($trabajador['CorreoElectronico']) ?></td>
-
-                                                <td><?= limpiar($trabajador['role']) ?></td>
-
-                                                <td><?= limpiar($trabajador['Created_at']) ?></td>
-
-                                            </tr>
-
-                                        <?php endwhile; ?>
-
-                                    <?php else: ?>
-
-                                        <tr>
-                                            <td colspan="6" class="text-center text-secondary p-4">
-                                                No hay trabajadores registrados.
-                                            </td>
-                                        </tr>
-
-                                    <?php endif; ?>
-
-                                </tbody>
-
-                            </table>
-
-                        </div>
-
-                    </div>
-
                 </div>
-
             </section>
-
         </div>
-
     </main>
-
     <div class="PIMarcaDeAgua"></div>
 </body>
-
 </html>
