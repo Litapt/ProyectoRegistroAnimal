@@ -13,7 +13,7 @@ require_rol('ADMINISTRADOR');?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro trabajadores</title>
-    <link rel="icon" href="../imagenes/Imagen.png" type="image/x-icon">    
+    <link rel="icon" href="../Imagen.png" type="image/x-icon">    
     <link rel="stylesheet" href="../css/registroTrabajadores.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -21,7 +21,7 @@ require_rol('ADMINISTRADOR');?>
 <body class="bg-success-subtle vh-100">
     <header class="position-relative d-flex align-items-center justify-content-between p-3 main-header text-white">
         <div class="d-flex gap-2">
-            <img src="../imagenes/ecologia.jpg" class="logo-img">
+            <img src="../imagenes/ecologia.png" class="logo-img">
             <img src="../imagesnes/gobierno.png" class="logo-img">
         </div>
         <div class="position-absolute top-50 start-50 translate-middle text-center">
@@ -101,7 +101,7 @@ require_rol('ADMINISTRADOR');?>
     </main>
     <script src="../javascript/registrotrabajadores.js"> </script>
 <div class="PIMarcaDeAgua">
-    <img src="../imagenes/ImagenEquipoNF.png">
+    <img src="../ImagenEquipoNF.png">
 </div>
 </body>
 </html>
