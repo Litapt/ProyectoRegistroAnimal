@@ -121,19 +121,15 @@ document.addEventListener('DOMContentLoaded', function () {
             opcion.hidden = opcion.dataset.especie !== especieSeleccionada;
         }
     }
-
     if (ciudadSelect) {
         ciudadSelect.addEventListener('change', filtrarColonias);
     }
-
     if (coloniaSelect) {
         coloniaSelect.addEventListener('change', mostrarCodigoPostal);
     }
-
     if (especieSelect) {
         especieSelect.addEventListener('change', filtrarRazas);
     }
-
     filtrarColonias();
     filtrarRazas();
 });
@@ -211,31 +207,15 @@ document.addEventListener('DOMContentLoaded', function () {
                         placeholder="Se llenará automáticamente"
                         readonly>
                     <label class="label-purple">Calle principal</label>
-                    <input
-                        type="text"
-                        name="calle_principal"
-                        class="form-control"
-                        placeholder="Agregar texto"
+                    <input type="text" name="calle_principal" class="form-control" placeholder="Ej: Niños Heroes"
                         required>
                     <label class="label-purple">Calle adyacente</label>
-                    <input
-                        type="text"
-                        name="calle_adyacente"
-                        class="form-control"
-                        placeholder="Agregar texto"
+                    <input type="text" name="calle_adyacente" class="form-control" placeholder="Ej: Frijol"
                         required>
                     <label class="label-purple">Número externo</label>
-                    <input
-                        type="text"
-                        name="numero_exterior"
-                        class="form-control"
-                        placeholder="Agregar texto">
+                    <input type="text" name="numero_exterior" class="form-control" placeholder="Ej: 789">
                     <label class="label-purple">Número interno</label>
-                    <input
-                        type="text"
-                        name="numero_interior"
-                        class="form-control"
-                        placeholder="Agregar texto">
+                    <input type="text" name="numero_interior" class="form-control" placeholder="Ej: 214">
                 </div>
                 <div class="step">
                     <h3>Dueño(s)</h3>
@@ -244,50 +224,32 @@ document.addEventListener('DOMContentLoaded', function () {
                         type="text"
                         name="nombres"
                         class="form-control"
-                        placeholder="Agregar texto"
+                        placeholder="Ej: Juan Carlos"
                         required>
                     <label class="label-purple">Apellido paterno</label>
                     <input
                         type="text"
                         name="apellido_paterno"
                         class="form-control"
-                        placeholder="Agregar texto">
+                        placeholder="Ej: Perez">
                     <label class="label-purple">Apellido materno</label>
                     <input
                         type="text"
                         name="apellido_materno"
                         class="form-control"
-                        placeholder="Agregar texto">
+                        placeholder="Ej: Collins">
                     <label class="label-purple">CURP</label>
-                    <input
-                        type="text"
-                        name="curp"
-                        class="form-control"
-                        maxlength="18"
-                        placeholder="Agregar texto"
+                    <input type="text" name="curp" class="form-control" maxlength="18" placeholder="Ej: XXXX021045XXXXXXX8"
                         required>
                     <label class="label-purple">Teléfono</label>
-                    <input
-                        type="text"
-                        name="telefono"
-                        class="form-control"
-                        maxlength="10"
-                        placeholder="Agregar texto">
+                    <input type="text" name="telefono" class="form-control" maxlength="10" minlenght="10" placeholder="Ej:613XXX2015">
                     <label class="label-purple">Clave catastral</label>
-                    <input
-                        type="text"
-                        name="clave_catastral"
-                        class="form-control"
-                        placeholder="Agregar texto">
+                    <input type="text" name="clave_catastral" class="form-control" placeholder="Agregar texto">
                 </div>
                 <div class="step">
                     <h3>Mascotas</h3>
                     <label class="label-purple">Nombre del animal</label>
-                    <input
-                        type="text"
-                        name="nombre_mascota"
-                        class="form-control"
-                        placeholder="Agregar texto"
+                    <input type="text" name="nombre_mascota" class="form-control" placeholder="Ej: Princesa"
                         required>
                     <label class="label-purple">Especie</label>
                     <select id="id_especie" class="form-control" required>
@@ -312,19 +274,13 @@ document.addEventListener('DOMContentLoaded', function () {
                             <?php endforeach; ?>
                         </select>
                     <label class="label-purple">Peso</label>
-                    <input
-                        type="number"
-                        step="0.01"
-                        min="0"
-                        name="peso"
-                        class="form-control"
-                        placeholder="Agregar texto">
+                    <input type="number" step="0.1" min="0.001" name="peso" class="form-control" placeholder="El peso se basa en Kg." required>
                     <label class="label-purple">Color</label>
                     <input
                         type="text"
                         name="colores"
                         class="form-control"
-                        placeholder="Agregar texto">
+                        placeholder="Cafe (Solo color principal)">
                     <label class="label-purple h-100">Sexo</label>
                     <div>
                         <label class="label-purple">Macho</label>

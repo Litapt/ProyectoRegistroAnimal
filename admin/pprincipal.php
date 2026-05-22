@@ -51,6 +51,7 @@ require_rol('ADMINISTRADOR');
                     </a>
                 </div>
                 <div class="col-12 col-md-6">
+                    <!-- -->
                     <a href="../admin/estadisticas.php" class="boton-menu-grande">
                         Estadísticas
                     </a>
