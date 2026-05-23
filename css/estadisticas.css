@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fondo general de la página */
+body {
+    background-color: #57c87c; /* Verde claro del cuerpo */
+    margin: 0;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+/* --- ENCABEZADO PRINCIPAL --- */
+.PPHeader {
+    background-color: #31a687; /* Verde/Teal oscuro del header */
+    min-height: 130px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.header-title h1 {
+    font-size: 3rem;
+    letter-spacing: 1px;
+}
+
+/* Círculos rojos para logos y foto de perfil */
+.red-circle {
+    width: 90px;
+    height: 90px;
+    background-color: #fd3344;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.85rem;
+    color: white;
+    line-height: 1.2;
+}
+
+/* Botón de cerrar sesión */
+.btn-rojo-pill {
+    background-color: #fd3344;
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    transition: background-color 0.2s;
+}
+
+.btn-rojo-pill:hover {
+    background-color: #e02838;
+}
+
+/* --- BARRA SECUNDARIA (SUB-HEADER) --- */
+.PPSubHeader {
+    background-color: #57c87c; /* Mismo fondo que el body */
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 4px solid #000000; /* Línea negra divisoria */
+}
+
+/* Flecha de retroceso roja */
+.back-arrow svg {
+    width: 60px;
+    height: 60px;
+    fill: #fd3344;
+    transition: transform 0.2s;
+}
+
+.back-arrow:hover svg {
+    transform: scale(1.1);
+}
+
+/* Botones / Pestañas de la barra secundaria */
+.btn-tab-rojo {
+    background-color: #fd3344;
+    color: white;
+    border: none;
+    border-radius: 30px; /* Forma de píldora */
+    padding: 12px 40px;
+    font-size: 1.25rem;
+    min-width: 200px;
+    transition: background-color 0.2s;
+}
+
+.btn-tab-rojo:hover {
+    background-color: #e02838;
+}
+
+/* --- MARCA DE AGUA --- */
+.watermark-circle {
+    position: fixed;
+    bottom: -30px;
+    right: -30px;
+    width: 130px;
+    height: 130px;
+    background-color: #fd3344;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.9rem;
+    text-align: center;
+    padding-bottom: 25px; /* Compensa la parte que queda fuera de la pantalla */
+    padding-right: 25px;
+}

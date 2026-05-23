@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #57c87c; 
+    margin: 0;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+
+.PPHeader {
+    background-color: #31a687; 
+    min-height: 130px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.header-title h1 {
+    font-size: 3rem;
+    letter-spacing: 1px;
+}
+
+
+.btn-rojo-pill {
+    background-color: #fd3344;
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    transition: background-color 0.2s;
+}
+
+.PPSubHeader {
+    background-color: #57c87c; 
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 4px solid #000000; 
+}
+
+.back-arrow svg {
+    width: 60px;
+    height: 60px;
+    fill: #fd3344;
+}
+
+.btn-tab-rojo {
+    background-color: #fd3344;
+    color: white;
+    border: none;
+    border-radius: 30px; 
+    padding: 12px 40px;
+    font-size: 1.25rem;
+    min-width: 200px;
+}
+
+.list-circle {
+    width: 45px;
+    height: 45px;
+    border: 2px solid #fd3344;
+    border-radius: 50%;
+    flex-shrink: 0; /* Evita que el círculo se aplaste si el texto es muy largo */
+}
+
+/*caja amarilla */
+.list-box {
+    background-color: #fdf5cc; 
+    padding: 10px 15px;
+}
+
+.chart-placeholder-circle {
+    width: 500px;
+    height: 500px;
+    background-color: #f8f4f4;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(12, 11, 11);
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.PIMarcaDeAgua {
+    position: fixed;
+    bottom: -20px;
+    right: -20px;
+    z-index: 1000;
+}

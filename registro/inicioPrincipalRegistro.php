@@ -1,5 +1,5 @@
 <?php
-require_once 'login/check.php';
+require_once '../login/check.php';
 require_rol('ADMINISTRADOR');
 ?>
 <!DOCTYPE html>
@@ -8,17 +8,17 @@ require_rol('ADMINISTRADOR');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro mascotas</title>
-    <link rel="stylesheet" href="css/registro.css">
-    <link rel="stylesheet" href="css/Registro_dueños.css">
-    <link rel="stylesheet" href="css/Registro_dueños1.css">
+    <link rel="stylesheet" href="../css/registro.css">
+    <link rel="stylesheet" href="../css/Registro_dueños.css">
+    <link rel="stylesheet" href="../css/Registro_dueños1.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="bg-success-subtle vh-100 d-flex flex-column">
 
     <header class="position-relative d-flex align-items-center justify-content-between p-3 main-header text-white">
         <div class="d-flex gap-2">
-            <img src="imagenes/Imagen.png" class="logo-img">
-            <img src="imagenes/Imagen.png" class="logo-img">
+            <img src="../imagenes/Imagen.png" class="logo-img">
+            <img src="../imagenes/Imagen.png" class="logo-img">
         </div>
         <div class="position-absolute top-50 start-50 translate-middle text-center w-100">
             <h4 class="mb-0 fw-bold">Mi mascota Comondú</h4>
@@ -26,7 +26,7 @@ require_rol('ADMINISTRADOR');
         </div>
         <div class="d-flex align-items-center gap-3">
             <button class="btn btn-danger rounded-pill px-3">Cerrar sesión</button>
-            <img src="imagenes/Imagen.png" alt="Perfil" class="logo-img">
+            <img src="../imagenes/Imagen.png" alt="Perfil" class="logo-img">
         </div>
     </header>
     <main class="flex-grow-1 d-flex flex-column align-items-center justify-content-center">
@@ -65,6 +65,6 @@ require_rol('ADMINISTRADOR');
             </div>
         </form>
     </main>
-    <script src="javascript/registro.js"></script>
+    <script src="../javascript/registro.js"></script>
 </body>
 </html>
