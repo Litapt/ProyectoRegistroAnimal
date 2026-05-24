@@ -60,11 +60,6 @@ require_once 'consultasDatos.php';
             <p class="mb-0">Registro animal del municipio de Comondú</p>
         </div>
 
-        <div class="d-flex align-items-center gap-3">
-            <a href="../inicio_sesion/index.php" class="btn btn-danger rounded-pill px-4">
-                Cerrar sesión
-            </a>
-
             <a href="../accesosgral/misDatos.php">
                 <img src="../imagenes/Imagen.png" class="rounded-circle" width="50">
             </a>
@@ -79,7 +74,7 @@ require_once 'consultasDatos.php';
             <aside class="sidebar p-4 d-flex flex-column align-items-center">
 
                 <div class="photo-placeholder-circle mb-4">
-                    <span>Consultas</span>
+                <h3 class="fw-bold fs-4 mb-0">Consultas</h3>
                 </div>
 
                 <div class="d-flex flex-column gap-2 w-100 mb-5">
@@ -99,11 +94,10 @@ require_once 'consultasDatos.php';
                 </div>
 
                 <div class="mt-auto w-100 text-center">
-                    <a href="../admin/pprincipal.php" class="text-decoration-none text-dark fw-bold fs-3">
-                        Regresar
-                    </a>
+                <a href="../admin/pprincipal.php" class="btn btn-outline-dark btn-sm fw-bold px-4 rounded-pill">
+                Regresar
+                </a>
                 </div>
-
             </aside>
 
             <section class="content-area p-3 w-100">

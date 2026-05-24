@@ -32,7 +32,10 @@ require_rol('ADMINISTRADOR');?>
                 Registro animal del municipio de Comondú
             </small>
         </div>
-        <div>
+        <div class="d-flex align-items-center">
+            <a class="btn btn-sm btn-outline-light me-2" href="../admin/pprincipal.php">
+                Regresar
+            </a>
             <a href="misDatos.html">
                 <img src="../imagenes/Imagen.png" alt="Logo" class="logo-img">
             </a>
