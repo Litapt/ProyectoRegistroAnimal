@@ -28,17 +28,18 @@
     border-right: 1px solid #eee;
 }
 
+/* Modificación del contenedor del círculo para centrar correctamente el nuevo texto */
 .photo-placeholder-circle {
     width: 150px;
     height: 150px;
-    border: 2px solid black;
+    border: 3px solid black; 
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 0.9rem;
-    padding: 15px;
+    padding: 10px;
+    background-color: #f8f9fa; 
 }
 
 .btn-sidebar {
@@ -51,8 +52,10 @@
     transition: 0.3s;
 }
 
-.btn-sidebar:hover {
-    background-color: #6e6e6e;
+/* Estilo opcional para cambiar el estado de "Cargar" activo */
+.btn-sidebar.active {
+    background-color: #198754;
+    color: white;
 }
 
 .btn-pink {

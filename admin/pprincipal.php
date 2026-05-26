@@ -22,10 +22,12 @@ require_rol('ADMINISTRADOR');
             <h4 class="mb-0">Mi mascota Comondú</h4>
             <small>Registro animal del municipio de Comondú</small>
         </div>
-        <div class="dropdown d-flex align-items-center">
-            <a class="btn btn-sm btn-outline-light me-2" href="../inicio_sesion/index.php">
-                Cerrar sesion
-            </a>
+        <div class="d-flex align-items-center gap-3">
+        <a class="btn btn-cerrar-sesion text-nowrap" href="../inicio_sesion/index.php">
+            Cerrar sesión
+        </a>
+        </div>
+        <div>
             <a href="../accesosgral/misDatos.php">
                 <img src="../imagenes/Imagen.png" class="rounded-circle" width="50">
             </a>
