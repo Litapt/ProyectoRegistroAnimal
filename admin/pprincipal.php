@@ -8,9 +8,10 @@ require_rol('ADMINISTRADOR');
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mi mascota Comondu</title>
-    <link rel="icon" href="../imagenes/Imagen.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/pprincipal.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+   <link rel="icon" href="../imagenes/Imagen.png" type="image/x-icon">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/principalcensa.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> 
 </head>
 <body class="bg-success-subtle">
     <header class="position-relative d-flex align-items-center justify-content-between p-3 PPHeader text-white">
@@ -23,17 +24,15 @@ require_rol('ADMINISTRADOR');
             <small>Registro animal del municipio de Comondú</small>
         </div>
         <div class="d-flex align-items-center gap-3">
-        <a class="btn btn-cerrar-sesion text-nowrap" href="../inicio_sesion/index.php">
-            Cerrar sesión
+        <a class="btn btn-cerrar-sesion" href="../login/logout.php">
+        Cerrar sesión
         </a>
-        </div>
-        <div>
+
             <a href="../accesosgral/misDatos.php">
                 <img src="../imagenes/Imagen.png" class="rounded-circle" width="50">
             </a>
         </div>
     </header>
-    <!-- Contenedor Principal es el centro -->
     <main class="container py-5 d-flex justify-content-center">
         <div class="bg-white p-4 p-md-5 rounded-5 shadow-lg w-100" style="max-width: 1000px;">
             <div class="row g-4">

@@ -145,8 +145,8 @@ document.addEventListener('DOMContentLoaded', function () {
             <small>Registro animal del municipio de Comondú</small>
         </div>
         <div class="dropdown d-flex align-items-center">
-            <a class="btn btn-sm btn-outline-light me-2" href="../admin/pprincipal.php">
-                Regresar
+            <a class="btn btn-sm btn-outline-light me-2" href="../inicio_sesion/index.php">
+                Cerrar sesión
             </a>
             <a href="../accesosgral/misDatos.php">
                 <img src="../imagenes/Imagen.png" class="rounded-circle" width="50">

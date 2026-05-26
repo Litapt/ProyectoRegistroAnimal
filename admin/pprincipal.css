@@ -43,6 +43,27 @@
     transition: 0.3s;
 }
 
+/* Botón rojo de cerrar sesión */
+.btn-cerrar-sesion {
+    background-color: #ff2b2b !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 50px !important;
+    padding: 14px 38px !important;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+    min-width: 190px;
+    text-align: center;
+}
+
+.btn-cerrar-sesion:hover {
+    background-color: #d91f1f !important;
+    color: white !important;
+    transform: scale(1.03);
+}
+
+
 .btn-regresar-menu:hover {
     background-color: #187a62;
     opacity: 0.9;

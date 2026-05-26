@@ -8,16 +8,6 @@
     object-fit: cover;
     border: 2px solid rgba(255, 255, 255, 0.3);
 }
-.main-header .btn-outline-light {
-    border-radius: 6px;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-.main-header .btn-outline-light:hover {
-    background-color: #ffffff;
-    color: #198754;
-}
 .PIMarcaDeAgua img{
     position:fixed;
     bottom:0;

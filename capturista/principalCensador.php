@@ -14,7 +14,7 @@ require_rol('CAPTURISTA');
 </head>
 <body class="bg-verde-principal">
 <header class="position-relative d-flex align-items-center justify-content-between p-3 PPHeader text-white">
-
+    <!-- Logos Izquierda -->
     <div class="d-flex align-items-center gap-3">
         <img src="../imagenes/Imagen.png" class="rounded-circle" width="50">
         <img src="../imagenes/Imagen.png" class="rounded-circle" width="50">
@@ -23,7 +23,7 @@ require_rol('CAPTURISTA');
         <h2 class="fw-bold mb-0">Mi mascota Comondú</h2>
         <p class="small mb-0">Registro animal del municipio de Comondú</p>
     </div>
-
+    <!-- Acciones Derecha -->
     <div class="d-flex align-items-center gap-3">
         <a class="btn btn-cerrar-sesion" href="../inicio_sesion/index.php">
             Cerrar sesion
@@ -34,7 +34,7 @@ require_rol('CAPTURISTA');
     </div>
 </header>
 <main class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
-    
+    <!-- Tarjeta Blanca Central -->
     <div class="card-blanca-central p-5 shadow-lg">
         <div class="d-grid gap-4">
             <a href="../registro/inicioPrincipalRegistro.php" class="btn btn-menu-rojo">
@@ -43,6 +43,10 @@ require_rol('CAPTURISTA');
             <a href="../consultas/consultasCapturista.php" class="btn btn-menu-rojo">
                 Consultar
             </a>
+        </div>
+        
+        <div class="text-center mt-5">
+            <a href="../inicio_sesion/index.php" class="text-dark fw-bold text-decoration-none fs-4">Regresar</a>
         </div>
     </div>
 </main>
