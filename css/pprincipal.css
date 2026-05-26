@@ -9,14 +9,14 @@
 
 /* Estilo de los botones grandes dentro del cuadro blanco */
 .boton-menu-grande {
-    background-color: #20a383; /* Tu color verde actual */
-    color: white !important; /* para que Bootstrap no modifique el color clasico  */
-    text-decoration: none !important; /* Quita la línea subrayada que suelen tener los enlaces*/
+    background-color: #20a383; 
+    color: white !important; 
+    text-decoration: none !important; 
     display: flex;
-    align-items: center;/*el texto se queda perfectamente centrado tanto vertical como horizontalmente dentro del botón.*/
-    justify-content: center;/*el texto se queda perfectamente centrado tanto vertical como horizontalmente dentro del botón.*/
+    align-items: center;
+    justify-content: center;
     height: 180px; 
-    font-size: 2rem;/*Hace que el tamaño de la letra sea grande y fácil de leer*/
+    font-size: 2rem;
     font-weight: 600;
     border-radius: 25px;
     text-align: center;
@@ -31,21 +31,20 @@
     box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
-/* Estilo para el botón regresar de abajo */
-.btn-regresar-menu {
-    background-color: #20a383;
-    color: white !important;
-    text-decoration: none !important;
-    padding: 12px 50px;
-    border-radius: 50px;
-    font-size: 1.4rem;
-    display: inline-block;
-    transition: 0.3s;
+.btn-cerrar-sesion {
+    background-color: #ff3333;
+    color: #ffffff !important;  
+    font-weight: 600;          
+    border-radius: 20px;      
+    padding: 8px 24px;         
+    border: none;              
+    transition: background-color 0.2s ease-in-out; 
+    text-decoration: none;   
 }
-
-.btn-regresar-menu:hover {
-    background-color: #187a62;
-    opacity: 0.9;
+/* efecto curzor */
+.btn-cerrar-sesion:hover {
+    background-color: #cc2424; 
+    color: #ffffff !important;
 }
 
 .PIMarcaDeAgua img {
