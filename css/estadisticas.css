@@ -3,7 +3,8 @@ body {
 }
 
 .PPHeader {
-    background: #198754;
+    background: linear-gradient(to right, #20a383, #52c47d);
+    z-index: 10;
 }
 
 .estadisticas-container {
@@ -12,17 +13,17 @@ body {
     margin: 30px auto;
 }
 
+.titulo-estadisticas {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
 .card-estadistica {
-    background: white;
+    background-color: white;
     border-radius: 18px;
     padding: 25px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
     height: 100%;
-}
-
-.titulo-estadisticas {
-    font-weight: bold;
-    color: #2c3e50;
 }
 
 .numero-card {
@@ -38,6 +39,7 @@ body {
 
 .chart-box {
     height: 350px;
+    position: relative;
 }
 
 .chart-box canvas {
@@ -48,10 +50,40 @@ body {
     position: fixed;
     right: 20px;
     bottom: 20px;
-    opacity: 0.12;
-    z-index: -1;
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: 0;
 }
 
 .PIMarcaDeAgua img {
-    max-width: 280px;
+    width: 180px;
+    max-width: 30vw;
+}
+
+.header-botones {
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .PPHeader {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .header-botones {
+        width: 100%;
+    }
+
+    .estadisticas-container {
+        margin-top: 20px;
+    }
+
+    .chart-box {
+        height: 300px;
+    }
+
+    .numero-card {
+        font-size: 32px;
+    }
 }

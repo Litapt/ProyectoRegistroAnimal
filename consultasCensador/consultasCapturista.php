@@ -1,14 +1,17 @@
 <?php
 require_once '../login/check.php';
 require_rol('CAPTURISTA');
+
 require_once 'consultasDatos.php';
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consultas Capturista - Mi Mascota Comondú</title>
+    <title>Consultas - Mi Mascota Comondú</title>
     <link rel="icon" href="../imagenes/Imagen.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/misdatos.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -45,39 +48,33 @@ require_once 'consultasDatos.php';
 
 <body class="bg-success-subtle">
 
-    <header class="p-3 PPHeader text-white d-flex align-items-center justify-content-between">
-
-        <div class="d-flex gap-2">
+        <header class="position-relative d-flex align-items-center justify-content-between p-3 PPHeader text-white">
+        <div class="d-flex align-items-center gap-2">
             <img src="../imagenes/Imagen.png" class="rounded-circle" width="50">
             <img src="../imagenes/Imagen.png" class="rounded-circle" width="50">
         </div>
-
         <div class="text-center flex-grow-1">
-            <h1 class="fw-bold mb-0">Mi mascota Comondú</h1>
-            <p class="mb-0">Consultas del capturista</p>
-        </div>
-
-        <div class="d-flex align-items-center gap-3">
-            <a href="../inicio_sesion/index.php" class="btn btn-danger rounded-pill px-4">
-                Cerrar sesión
+            <a class="ink-offset-2 link-underline link-underline-opacity-0 link-light" href="../capturista/principalCensador.php">
+                <h4 class="mb-0">Mi mascota Comondú</h4>
+                <small>Registro animal del municipio de Comondú</small>
             </a>
-
-            <a href="../accesosgral/misDatos.php">
+        </div>
+        <div class="d-flex align-items-center justify-content-center gap-2 flex-wrap header-botones">
+            <a class="btn btn-sm btn-outline-light" href="../capturista/principalCensador.php">
+                Regresar
+            </a>
+            <a href="../accesosgral/misDatosCapturista.php">
                 <img src="../imagenes/Imagen.png" class="rounded-circle" width="50">
             </a>
         </div>
-
     </header>
+
 
     <main class="container-fluid p-4">
 
         <div class="main-card shadow-lg d-flex bg-white">
 
             <aside class="sidebar p-4 d-flex flex-column align-items-center">
-
-                <div class="photo-placeholder-circle mb-4">
-                    <span>Consultas</span>
-                </div>
 
                 <div class="d-flex flex-column gap-2 w-100 mb-5">
 
@@ -88,13 +85,6 @@ require_once 'consultasDatos.php';
                     <button type="button" class="btn-sidebar btn-consulta" data-target="animales">
                         Cargar animales
                     </button>
-
-                </div>
-
-                <div class="mt-auto w-100 text-center">
-                    <a href="../capturista/principalCapturista.php" class="text-decoration-none text-dark fw-bold fs-3">
-                        Regresar
-                    </a>
                 </div>
 
             </aside>
@@ -283,15 +273,93 @@ require_once 'consultasDatos.php';
                                                 No hay animales registrados.
                                             </td>
                                         </tr>
+
                                     <?php endif; ?>
+
                                 </tbody>
+
                             </table>
+
                         </div>
+
                     </div>
+
+                    <div id="consulta-trabajadores" class="consulta-tabla d-none">
+
+                        <h3 class="mb-3">Trabajadores registrados</h3>
+
+                        <div class="table-responsive">
+
+                            <table class="table table-striped table-hover align-middle">
+
+                                <thead class="table-success">
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nombre</th>
+                                        <th>CURP</th>
+                                        <th>Correo</th>
+                                        <th>Rol</th>
+                                        <th>Fecha de registro</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+
+                                    <?php if ($datosTrabajadores && $datosTrabajadores->num_rows > 0): ?>
+
+                                        <?php while ($trabajador = $datosTrabajadores->fetch_assoc()): ?>
+
+                                            <tr
+                                                class="fila-click"
+                                                onclick="window.location.href='detalleTrabajador.php?id=<?= $trabajador['ID'] ?>'">
+
+                                                <td><?= limpiar($trabajador['ID']) ?></td>
+
+                                                <td>
+                                                    <?= limpiar($trabajador['Nombre']) ?>
+                                                    <?= limpiar($trabajador['ApellidoPaterno']) ?>
+                                                    <?= limpiar($trabajador['ApellidoMaterno']) ?>
+                                                </td>
+
+                                                <td><?= limpiar($trabajador['CURP']) ?></td>
+
+                                                <td><?= limpiar($trabajador['CorreoElectronico']) ?></td>
+
+                                                <td><?= limpiar($trabajador['role']) ?></td>
+
+                                                <td><?= limpiar($trabajador['Created_at']) ?></td>
+
+                                            </tr>
+
+                                        <?php endwhile; ?>
+
+                                    <?php else: ?>
+
+                                        <tr>
+                                            <td colspan="6" class="text-center text-secondary p-4">
+                                                No hay trabajadores registrados.
+                                            </td>
+                                        </tr>
+
+                                    <?php endif; ?>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
                 </div>
+
             </section>
+
         </div>
+
     </main>
+
     <div class="PIMarcaDeAgua"></div>
 </body>
+
 </html>

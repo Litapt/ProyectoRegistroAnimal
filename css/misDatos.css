@@ -4,8 +4,7 @@
 }
 
 .PPHeader {
-    background: #4cc082; 
-    min-height: 120px;
+    background: linear-gradient(to right, #20a383, #52c47d);
 }
 
 .header-circle {

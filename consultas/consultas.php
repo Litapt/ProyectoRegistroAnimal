@@ -48,39 +48,33 @@ require_once 'consultasDatos.php';
 
 <body class="bg-success-subtle">
 
-    <header class="p-3 PPHeader text-white d-flex align-items-center justify-content-between">
-
-        <div class="d-flex gap-2">
+        <header class="position-relative d-flex align-items-center justify-content-between p-3 PPHeader text-white">
+        <div class="d-flex align-items-center gap-2">
             <img src="../imagenes/Imagen.png" class="rounded-circle" width="50">
             <img src="../imagenes/Imagen.png" class="rounded-circle" width="50">
         </div>
-
         <div class="text-center flex-grow-1">
-            <h1 class="fw-bold mb-0">Mi mascota Comondú</h1>
-            <p class="mb-0">Registro animal del municipio de Comondú</p>
-        </div>
-
-        <div class="d-flex align-items-center gap-3">
-            <a href="../inicio_sesion/index.php" class="btn btn-danger rounded-pill px-4">
-                Cerrar sesión
+            <a class="ink-offset-2 link-underline link-underline-opacity-0 link-light" href="../admin/pprincipal.php">
+            <h4 class="mb-0">Mi mascota Comondú</h4>
+            <small>Registro animal del municipio de Comondú</small>
             </a>
-
-            <a href="../accesosgral/misDatos.php">
+        </div>
+        <div class="d-flex align-items-center justify-content-center gap-2 flex-wrap header-botones">
+            <a class="btn btn-sm btn-outline-light" href="../consultas/consultas.php">
+                Regresar
+            </a>
+            <a href="../accesosgral/misDatosCapturista.php">
                 <img src="../imagenes/Imagen.png" class="rounded-circle" width="50">
             </a>
         </div>
-
     </header>
+
 
     <main class="container-fluid p-4">
 
         <div class="main-card shadow-lg d-flex bg-white">
 
             <aside class="sidebar p-4 d-flex flex-column align-items-center">
-
-                <div class="photo-placeholder-circle mb-4">
-                    <span>Consultas</span>
-                </div>
 
                 <div class="d-flex flex-column gap-2 w-100 mb-5">
 
@@ -96,12 +90,6 @@ require_once 'consultasDatos.php';
                         Cargar trabajadores
                     </button>
 
-                </div>
-
-                <div class="mt-auto w-100 text-center">
-                    <a href="../admin/pprincipal.php" class="text-decoration-none text-dark fw-bold fs-3">
-                        Regresar
-                    </a>
                 </div>
 
             </aside>

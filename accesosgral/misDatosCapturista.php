@@ -37,17 +37,17 @@ require_once 'misDatosCons.php';
             <img src="../imagenes/Imagen.png" class="rounded-circle" width="50">
         </div>
         <div class="text-center flex-grow-1">
-            <a class="ink-offset-2 link-underline link-underline-opacity-0 link-light" href="../admin/pprincipal.php">
+            <a class="ink-offset-2 link-underline link-underline-opacity-0 link-light" href="../capturista/principalCensador.php">
             <h4 class="mb-0">Mi mascota Comondú</h4>
             <small>Registro animal del municipio de Comondú</small>
             </a>
         </div>
         <div class="d-flex align-items-center justify-content-center gap-2 flex-wrap header-botones">
-            <a class="btn btn-sm btn-outline-light" href="../admin/pprincipal.php">
+            <a class="btn btn-sm btn-outline-light" href="../capturista/principalCensador.php">
                 Regresar
             </a>
 
-            <a href="../accesosgral/misDatos.php">
+            <a href="../accesosgral/misDatosCapturista.php">
                 <img src="../imagenes/Imagen.png" class="rounded-circle" width="50">
             </a>
         </div>
