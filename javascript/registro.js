@@ -56,6 +56,12 @@ document.addEventListener('DOMContentLoaded', () => {
         completar.hidden=!siguiente.hidden;
     };
 
+    const isValidStep =() => {
+        const fields = steps[currentStep].querySelector('input','textarea');
+        return[...fields].every((field)=>field.reportValidity());
+        //Nos quedamos en el minuto 22:06
+    }
+
     updateProgress();
 
 });
