@@ -25,7 +25,7 @@ require_rol('ADMINISTRADOR');
             </a>
         </div>
         <div class="d-flex align-items-center justify-content-center gap-2 flex-wrap header-botones">
-            <a class="btn btn-sm btn-outline-danger" href="../index.php">
+            <a class="btn btn-sm btn-outline-danger" href="../login/logout.php">
                 Cerrar sesión
             </a>
 
