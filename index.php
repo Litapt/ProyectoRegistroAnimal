@@ -57,7 +57,7 @@
                 <label for="password">Contraseña</label>
                 <input type="password" id="password" name="Password" minlength="8" required>
             </div>
-            <a href="restablecerPsw.php" class="forgot">Olvide mi contraseña</a>
+            <a href="restablecer/1restablecerPsw.php" class="forgot">Olvide mi contraseña</a>
             <button class="btn-submit" type="submit">
                 Iniciar sesión
             </button>

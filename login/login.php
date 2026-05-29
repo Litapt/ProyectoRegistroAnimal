@@ -24,7 +24,7 @@ if ((int)$user['is_active'] === 0) {
 }
 
 if ($contrasena !== $user['Password']) {
-    header('Location: ..index.php?error=1');
+    header('Location: ../index.php?error=1');
     exit;
 }
 /*if (!password_verify($contrasena, $user['Password'])) {

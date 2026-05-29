@@ -44,6 +44,7 @@ while ($fila = $resultadoRazas->fetch_assoc()) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/inicioPrincipalRegistro.css">
     <script src="../javascript/registro.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
 document.addEventListener('DOMContentLoaded', function () {
     const ciudadSelect = document.getElementById('id_ciudad');
@@ -183,8 +184,9 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="pasos-contenedor">
                 <div class="step">
                     <h3>Dirección</h3>
-                    <label class="label-purple">Ciudad</label>
-                    <select id="id_ciudad" name="id_ciudad" class="form-control" required>                        <option value="">Selecciona ciudad...</option>
+                    <label class="label-purple">Localidad</label>
+                    <select id="id_ciudad" name="id_ciudad" class="form-control" required>                        
+                        <option value="">Selecciona la localidad...</option>
                         <?php while ($ciudad = $resultadoCiudades->fetch_assoc()): ?>
                             <option value="<?= $ciudad['id'] ?>">
                                 <?= htmlspecialchars($ciudad['nombre_ciudad']) ?>
@@ -193,7 +195,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     </select>
                     <label class="label-purple">Colonia</label>
                     <select id="id_colonia" name="id_colonia" class="form-control" required>
-                        <option value="">Selecciona colonia...</option>
+                        <option value="">Selecciona colonia (Primero seleccionar una localidad)...</option>
                         <?php foreach ($colonias as $colonia): ?>
                             <option
                                 value="<?= $colonia['id'] ?>"
