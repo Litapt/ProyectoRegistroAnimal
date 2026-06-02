@@ -2,18 +2,24 @@ use prabasededatos;
 
 #INSERT INTO especies (nombre_especie) VALUES ('Canino'), ('Felino'), ('Ave'), ('Reptil'),('Roedor'),('Bovidos'),('Peces');
 
-/*INSERT INTO razas ( id_especie, nombre_raza) VALUES
-(7, 'Angel'),
-(7, 'Betta'),
-(7, 'Cebra'),
-(7, 'Guppy'),
-(7, 'Tetra neon'),
-(7, 'Planty'),
-(7, 'Molly negro'),
-(7, 'Corydora paleatus'),
-(7, 'Disco'),
-(7, 'Ramirezi'),
-(7, 'Otro');*/
+INSERT INTO razas ( id_especie, nombre_raza) VALUES
+(8, 'Ajolote'),
+(8, 'Triton estirado'),
+(8, 'Salamandra tigre'),
+(8, 'Rana de uñas africana'),
+(8, 'Rana enana africana'),
+(8, 'Rana lechera amazónica'),
+(8, 'Rana arborícola verde americana'),
+(8, 'Rana de Budgett'),
+(8, 'Rana arborícola cubana'),
+(8, 'Rana cornuda'),
+(8, 'Rana pintada'),
+(8, 'Rana duende'),
+(8, 'Rana arborícola de ojos rojos'),
+(8, 'Rana tomate'),
+(8, 'Rana mantella'),
+(8, 'Otros'),
+(8, 'Rana dardo');
 
 /*INSERT INTO razas ( id_especie, nombre_raza) VALUES
 (6, 'Otro'),

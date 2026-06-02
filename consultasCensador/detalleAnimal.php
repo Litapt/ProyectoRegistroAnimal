@@ -37,9 +37,6 @@ if (!$animal) {
             <a class="btn btn-sm btn-outline-light" href="../capturista/principalCensador.php">
                 Regresar
             </a>
-            <a href="../accesosgral/misDatosCapturista.php">
-                <img src="../imagenes/Imagen.png" class="rounded-circle" width="50">
-            </a>
         </div>
     </header>
 <main class="container py-4">

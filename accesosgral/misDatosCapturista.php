@@ -8,7 +8,7 @@ require_once 'misDatosCons.php';
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Mis Datos - Comondú</title>
-        <link rel="icon" href="../imagenes/logo.png" type="image/x-icon">
+    <link rel="icon" href="../imagenes/logo.png" type="image/x-icon">
         <link rel="stylesheet" href="../css/misDatos.css" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -47,7 +47,7 @@ require_once 'misDatosCons.php';
                 Regresar
             </a>
 
-            <a href="../accesosgral/misDatosCapturista.php">
+            <a href="#">
                 <img src="../imagenes/Imagen.png" class="rounded-circle" width="50">
             </a>
         </div>

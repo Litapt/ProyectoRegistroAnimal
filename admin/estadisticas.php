@@ -12,17 +12,95 @@ require_once 'estadisticasDatos.php';
     <link rel="icon" href="../imagenes/logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/estadisticas.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        window.estadisticasData = {
+         window.estadisticasData = {
             datosEspecies: <?= json_encode($datosEspecies, JSON_UNESCAPED_UNICODE) ?>,
             datosEsterilizados: <?= json_encode($datosEsterilizados, JSON_UNESCAPED_UNICODE) ?>,
             datosCartilla: <?= json_encode($datosCartilla, JSON_UNESCAPED_UNICODE) ?>,
             datosColonias: <?= json_encode($datosColonias, JSON_UNESCAPED_UNICODE) ?>
         };
+        document.addEventListener('DOMContentLoaded', function () {
+            const datos = window.estadisticasData;
+            if (!datos) {
+                console.error('No se encontraron los datos de estadísticas.');
+                return;
+            }
+            function crearGraficaPie(idCanvas, datosGrafica, titulo) {
+                const canvas = document.getElementById(idCanvas);
+                if (!canvas || !datosGrafica) {
+                    return;
+                }
+                new Chart(canvas, {
+                    type: 'pie',
+                    data: {
+                        labels: datosGrafica.labels,
+                        datasets: [{
+                            label: titulo,
+                            data: datosGrafica.valores
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false
+                    }
+                });
+            }
+            function crearGraficaBarra(idCanvas, datosGrafica, titulo) {
+                const canvas = document.getElementById(idCanvas);
+                if (!canvas || !datosGrafica) {
+                    return;
+                }
+                new Chart(canvas, {
+                    type: 'bar',
+                    data: {
+                        labels: datosGrafica.labels,
+                        datasets: [{
+                            label: titulo,
+                            data: datosGrafica.valores
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                ticks: {
+                                    precision: 0
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            crearGraficaPie(
+                'graficaEspecies',
+                datos.datosEspecies,
+                'Mascotas por especie'
+            );
+
+            crearGraficaPie(
+                'graficaEsterilizados',
+                datos.datosEsterilizados,
+                'Mascotas esterilizadas'
+            );
+
+            crearGraficaPie(
+                'graficaCartilla',
+                datos.datosCartilla,
+                'Cartilla de vacunación'
+            );
+
+            crearGraficaBarra(
+                'graficaColonias',
+                datos.datosColonias,
+                'Registros por colonia'
+            );
+        });
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
-    <script src="../javascript/estadisticas.js" defer></script>
 </head>
 <body class="bg-success-subtle">
     <header class="position-relative d-flex align-items-center justify-content-between p-3 PPHeader text-white">
@@ -39,9 +117,6 @@ require_once 'estadisticasDatos.php';
         <div class="d-flex align-items-center justify-content-center gap-2 flex-wrap header-botones">
             <a class="btn btn-sm btn-outline-light" href="../admin/pprincipal.php">
                 Regresar
-            </a>
-            <a href="../accesosgral/misDatos.php">
-                <img src="../imagenes/Imagen.png" class="rounded-circle" width="50">
             </a>
         </div>
     </header>
@@ -137,6 +212,11 @@ require_once 'estadisticasDatos.php';
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="d-flex align-items-center justify-content-start mt-3 header-botones">
+            <a class="btn btn-sm btn-primary" href="estadisticasPDF.php">
+                Descargar Estadistica
+            </a>
         </div>
     </main>
     <div class="PIMarcaDeAgua">

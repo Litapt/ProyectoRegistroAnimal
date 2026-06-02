@@ -19,7 +19,7 @@ while ($raza = $listaRazas->fetch_assoc()) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consultas - Mi Mascota Comondú</title>
-    <link rel="icon" href="../imagenes/Imagen.png" type="image/x-icon">
+    <link rel="icon" href="../imagenes/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/misdatos.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
@@ -212,26 +212,25 @@ while ($raza = $listaRazas->fetch_assoc()) {
         <img src="../imagenes/Imagen.png" class="rounded-circle" width="50">
     </div>
     <div class="text-center flex-grow-1">
-        <h1 class="fw-bold mb-0">Mi mascota Comondú</h1>
-        <p class="mb-0">Registro animal del municipio de Comondú</p>
-    </div>
+            <a class="ink-offset-2 link-underline link-underline-opacity-0 link-light" href="../admin/pprincipal.php">
+            <h4 class="mb-0">Mi mascota Comondú</h4>
+            <small>Registro animal del municipio de Comondú</small>
+            </a>
+        </div>
     <div class="d-flex align-items-center gap-3">
-        <a href="../inicio_sesion/index.php" class="btn btn-danger rounded-pill px-4">Cerrar sesión</a>
-        <a href="../accesosgral/misDatos.php"><img src="../imagenes/Imagen.png" class="rounded-circle" width="50"></a>
+        <a class="btn btn-sm btn-outline-light" href="../admin/pprincipal.php">
+            Regresar
+        </a>
     </div>
 </header>
 
 <main class="container-fluid p-4">
     <div class="main-card shadow-lg d-flex bg-white">
         <aside class="sidebar p-4 d-flex flex-column align-items-center">
-            <div class="photo-placeholder-circle mb-4"><span>Consultas</span></div>
             <div class="d-flex flex-column gap-2 w-100 mb-5">
                 <button type="button" class="btn-sidebar btn-consulta active" data-target="duenos">Cargar dueños</button>
                 <button type="button" class="btn-sidebar btn-consulta" data-target="animales">Cargar animales</button>
                 <button type="button" class="btn-sidebar btn-consulta" data-target="trabajadores">Cargar trabajadores</button>
-            </div>
-            <div class="mt-auto w-100 text-center">
-                <a href="../admin/pprincipal.php" class="text-decoration-none text-dark fw-bold fs-3">Regresar</a>
             </div>
         </aside>
 

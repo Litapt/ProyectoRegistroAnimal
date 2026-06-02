@@ -23,7 +23,7 @@ if (!$trabajador) {
 <head>
     <meta charset="UTF-8">
     <title>Detalle del Trabajador</title>
-            <link rel="icon" href="../imagenes/logo.png" type="image/x-icon">
+    <link rel="icon" href="../imagenes/logo.png" type="image/x-icon">
 
     <link rel="stylesheet" href="../css/misdatos.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -45,9 +45,6 @@ if (!$trabajador) {
         <div class="d-flex align-items-center justify-content-center gap-2 flex-wrap header-botones">
             <a class="btn btn-sm btn-outline-light" href="../consultas/consultas.php">
                 Regresar
-            </a>
-            <a href="../accesosgral/misDatos.php">
-                <img src="../imagenes/Imagen.png" class="rounded-circle" width="50">
             </a>
         </div>
     </header>

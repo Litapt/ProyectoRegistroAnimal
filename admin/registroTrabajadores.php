@@ -31,12 +31,8 @@ require_rol('ADMINISTRADOR');?>
             </a>
         </div>
         <div class="d-flex align-items-center justify-content-center gap-2 flex-wrap header-botones">
-            <a class="btn btn-sm btn-outline-light" href="../admin/pprincipal.php">
+            <a class="btn btn-sm btn-outline-light" href="pprincipal.php">
                 Regresar
-            </a>
-
-            <a href="../accesosgral/misDatos.php">
-                <img src="../imagenes/Imagen.png" class="rounded-circle" width="50">
             </a>
         </div>
     </header>
