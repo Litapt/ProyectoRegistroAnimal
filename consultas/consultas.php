@@ -3,6 +3,12 @@ require_once '../login/check.php';
 require_rol('ADMINISTRADOR');
 require_once 'consultasDatos.php';
 
+$tabActiva = $_GET['tab'] ?? 'duenos';
+
+if (!in_array($tabActiva, ['duenos', 'animales', 'trabajadores'])) {
+    $tabActiva = 'duenos';
+}
+
 $listaColonias = $conexion->query("SELECT id, nombre_colonia, codigo_postal FROM colonias WHERE is_active = 1 ORDER BY nombre_colonia ASC");
 $listaEspecies = $conexion->query("SELECT id, nombre_especie FROM especies WHERE is_active = 1 ORDER BY nombre_especie ASC");
 $listaRazas = $conexion->query("SELECT id, id_especie, nombre_raza FROM razas WHERE is_active = 1 ORDER BY nombre_raza ASC");
@@ -24,6 +30,7 @@ while ($raza = $listaRazas->fetch_assoc()) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -48,39 +55,54 @@ while ($raza = $listaRazas->fetch_assoc()) {
             document.querySelectorAll('.btn-edit-dueno').forEach(boton => {
                 boton.addEventListener('click', function () {
                     const id = this.dataset.id;
-                    fetch('api/getDueno.php?id=' + id).then(r => r.json()).then(resp => {
-                        if (!resp.ok) {
-                            Swal.fire('Error', resp.msg || 'No se encontró el dueño', 'error');
-                            return;
-                        }
-                        const d = resp.data;
-                        document.getElementById('dueno_id').value = d.id_dueno ?? '';
-                        document.getElementById('dueno_nombres').value = d.nombres ?? '';
-                        document.getElementById('dueno_apellido_paterno').value = d.apellido_paterno ?? '';
-                        document.getElementById('dueno_apellido_materno').value = d.apellido_materno ?? '';
-                        document.getElementById('dueno_curp').value = d.curp ?? '';
-                        document.getElementById('dueno_telefono').value = d.telefono ?? '';
-                        document.getElementById('dueno_clave_catastral').value = d.clave_catastral ?? '';
-                        document.getElementById('dueno_id_colonia').value = d.id_colonia ?? '';
-                        document.getElementById('dueno_calle_principal').value = d.calle_principal ?? '';
-                        document.getElementById('dueno_calle_adyacente').value = d.calle_adyacente ?? '';
-                        document.getElementById('dueno_numero_exterior').value = d.numero_exterior ?? '';
-                        document.getElementById('dueno_numero_interior').value = d.numero_interior ?? '';
-                        modalEditarDueno.show();
-                    }).catch(() => Swal.fire('Error', 'Error al cargar los datos del dueño', 'error'));
+
+                    fetch('api/getDueno.php?id=' + id)
+                        .then(r => r.json())
+                        .then(resp => {
+                            if (!resp.ok) {
+                                Swal.fire('Error', resp.msg || 'No se encontró el dueño', 'error');
+                                return;
+                            }
+
+                            const d = resp.data;
+
+                            document.getElementById('dueno_id').value = d.id_dueno ?? '';
+                            document.getElementById('dueno_nombres').value = d.nombres ?? '';
+                            document.getElementById('dueno_apellido_paterno').value = d.apellido_paterno ?? '';
+                            document.getElementById('dueno_apellido_materno').value = d.apellido_materno ?? '';
+                            document.getElementById('dueno_curp').value = d.curp ?? '';
+                            document.getElementById('dueno_telefono').value = d.telefono ?? '';
+                            document.getElementById('dueno_clave_catastral').value = d.clave_catastral ?? '';
+                            document.getElementById('dueno_id_colonia').value = d.id_colonia ?? '';
+                            document.getElementById('dueno_calle_principal').value = d.calle_principal ?? '';
+                            document.getElementById('dueno_calle_adyacente').value = d.calle_adyacente ?? '';
+                            document.getElementById('dueno_numero_exterior').value = d.numero_exterior ?? '';
+                            document.getElementById('dueno_numero_interior').value = d.numero_interior ?? '';
+
+                            modalEditarDueno.show();
+                        })
+                        .catch(() => Swal.fire('Error', 'Error al cargar los datos del dueño', 'error'));
                 });
             });
 
             document.getElementById('formEditarDueno').addEventListener('submit', function (e) {
                 e.preventDefault();
-                fetch('api/editDueno.php', { method: 'POST', body: new FormData(this) }).then(r => r.json()).then(resp => {
-                    if (!resp.ok) {
-                        Swal.fire('Error', resp.msg || 'Error al editar dueño', 'error');
-                        return;
-                    }
-                    modalEditarDueno.hide();
-                    Swal.fire('Correcto', 'Dueño actualizado correctamente', 'success').then(() => location.reload());
-                }).catch(() => Swal.fire('Error', 'Error al guardar cambios del dueño', 'error'));
+
+                fetch('api/editDueno.php', {
+                    method: 'POST',
+                    body: new FormData(this)
+                })
+                    .then(r => r.json())
+                    .then(resp => {
+                        if (!resp.ok) {
+                            Swal.fire('Error', resp.msg || 'Error al editar dueño', 'error');
+                            return;
+                        }
+
+                        modalEditarDueno.hide();
+                        Swal.fire('Correcto', 'Dueño actualizado correctamente', 'success').then(() => location.reload());
+                    })
+                    .catch(() => Swal.fire('Error', 'Error al guardar cambios del dueño', 'error'));
             });
 
             const especieAnimalEdit = document.getElementById('animal_id_especie');
@@ -89,11 +111,13 @@ while ($raza = $listaRazas->fetch_assoc()) {
             function filtrarRazasEditar() {
                 const idEspecie = especieAnimalEdit.value;
                 razaAnimalEdit.value = '';
+
                 for (let opcion of razaAnimalEdit.options) {
                     if (opcion.value === '') {
                         opcion.hidden = false;
                         continue;
                     }
+
                     opcion.hidden = opcion.dataset.especie !== idEspecie;
                 }
             }
@@ -103,70 +127,102 @@ while ($raza = $listaRazas->fetch_assoc()) {
             document.querySelectorAll('.btn-edit-animal').forEach(boton => {
                 boton.addEventListener('click', function () {
                     const id = this.dataset.id;
-                    fetch('api/getAnimal.php?id=' + id).then(r => r.json()).then(resp => {
-                        if (!resp.ok) {
-                            Swal.fire('Error', resp.msg || 'No se encontró el animal', 'error');
-                            return;
-                        }
-                        const a = resp.data;
-                        document.getElementById('animal_id').value = a.id_animal ?? '';
-                        document.getElementById('animal_nombre').value = a.nombre ?? '';
-                        document.getElementById('animal_peso').value = a.peso ?? '';
-                        document.getElementById('animal_colores').value = a.colores ?? '';
-                        document.getElementById('animal_sexo').value = a.sexo ?? '';
-                        document.getElementById('animal_id_especie').value = a.id_especie ?? '';
-                        filtrarRazasEditar();
-                        document.getElementById('animal_id_raza').value = a.id_raza ?? '';
-                        document.getElementById('animal_esterilizado').checked = parseInt(a.esterilizado) === 1;
-                        document.getElementById('animal_carnet').checked = parseInt(a.carnet_de_vacunacion) === 1;
-                        modalEditarAnimal.show();
-                    }).catch(() => Swal.fire('Error', 'Error al cargar los datos del animal', 'error'));
+
+                    fetch('api/getAnimal.php?id=' + id)
+                        .then(r => r.json())
+                        .then(resp => {
+                            if (!resp.ok) {
+                                Swal.fire('Error', resp.msg || 'No se encontró el animal', 'error');
+                                return;
+                            }
+
+                            const a = resp.data;
+
+                            document.getElementById('animal_id').value = a.id_animal ?? '';
+                            document.getElementById('animal_nombre').value = a.nombre ?? '';
+                            document.getElementById('animal_peso').value = a.peso ?? '';
+                            document.getElementById('animal_colores').value = a.colores ?? '';
+                            document.getElementById('animal_sexo').value = a.sexo ?? '';
+                            document.getElementById('animal_id_especie').value = a.id_especie ?? '';
+
+                            filtrarRazasEditar();
+
+                            document.getElementById('animal_id_raza').value = a.id_raza ?? '';
+                            document.getElementById('animal_esterilizado').checked = parseInt(a.esterilizado) === 1;
+                            document.getElementById('animal_carnet').checked = parseInt(a.carnet_de_vacunacion) === 1;
+
+                            modalEditarAnimal.show();
+                        })
+                        .catch(() => Swal.fire('Error', 'Error al cargar los datos del animal', 'error'));
                 });
             });
 
             document.getElementById('formEditarAnimal').addEventListener('submit', function (e) {
                 e.preventDefault();
-                fetch('api/editAnimal.php', { method: 'POST', body: new FormData(this) }).then(r => r.json()).then(resp => {
-                    if (!resp.ok) {
-                        Swal.fire('Error', resp.msg || 'Error al editar animal', 'error');
-                        return;
-                    }
-                    modalEditarAnimal.hide();
-                    Swal.fire('Correcto', 'Animal actualizado correctamente', 'success').then(() => location.reload());
-                }).catch(() => Swal.fire('Error', 'Error al guardar cambios del animal', 'error'));
+
+                fetch('api/editAnimal.php', {
+                    method: 'POST',
+                    body: new FormData(this)
+                })
+                    .then(r => r.json())
+                    .then(resp => {
+                        if (!resp.ok) {
+                            Swal.fire('Error', resp.msg || 'Error al editar animal', 'error');
+                            return;
+                        }
+
+                        modalEditarAnimal.hide();
+                        Swal.fire('Correcto', 'Animal actualizado correctamente', 'success').then(() => location.reload());
+                    })
+                    .catch(() => Swal.fire('Error', 'Error al guardar cambios del animal', 'error'));
             });
 
             document.querySelectorAll('.btn-edit-trabajador').forEach(boton => {
                 boton.addEventListener('click', function () {
                     const id = this.dataset.id;
-                    fetch('api/getTrabajador.php?id=' + id).then(r => r.json()).then(resp => {
-                        if (!resp.ok) {
-                            Swal.fire('Error', resp.msg || 'No se encontró el trabajador', 'error');
-                            return;
-                        }
-                        const t = resp.data;
-                        document.getElementById('trabajador_id').value = t.id_trabajador ?? '';
-                        document.getElementById('trabajador_nombre').value = t.Nombre ?? '';
-                        document.getElementById('trabajador_apellido_paterno').value = t.ApellidoPaterno ?? '';
-                        document.getElementById('trabajador_apellido_materno').value = t.ApellidoMaterno ?? '';
-                        document.getElementById('trabajador_curp').value = t.CURP ?? '';
-                        document.getElementById('trabajador_correo').value = t.CorreoElectronico ?? '';
-                        document.getElementById('trabajador_role').value = t.role ?? '';
-                        modalEditarTrabajador.show();
-                    }).catch(() => Swal.fire('Error', 'Error al cargar los datos del trabajador', 'error'));
+
+                    fetch('api/getTrabajador.php?id=' + id)
+                        .then(r => r.json())
+                        .then(resp => {
+                            if (!resp.ok) {
+                                Swal.fire('Error', resp.msg || 'No se encontró el trabajador', 'error');
+                                return;
+                            }
+
+                            const t = resp.data;
+
+                            document.getElementById('trabajador_id').value = t.id_trabajador ?? '';
+                            document.getElementById('trabajador_nombre').value = t.Nombre ?? '';
+                            document.getElementById('trabajador_apellido_paterno').value = t.ApellidoPaterno ?? '';
+                            document.getElementById('trabajador_apellido_materno').value = t.ApellidoMaterno ?? '';
+                            document.getElementById('trabajador_curp').value = t.CURP ?? '';
+                            document.getElementById('trabajador_correo').value = t.CorreoElectronico ?? '';
+                            document.getElementById('trabajador_role').value = t.role ?? '';
+
+                            modalEditarTrabajador.show();
+                        })
+                        .catch(() => Swal.fire('Error', 'Error al cargar los datos del trabajador', 'error'));
                 });
             });
 
             document.getElementById('formEditarTrabajador').addEventListener('submit', function (e) {
                 e.preventDefault();
-                fetch('api/editTrabajador.php', { method: 'POST', body: new FormData(this) }).then(r => r.json()).then(resp => {
-                    if (!resp.ok) {
-                        Swal.fire('Error', resp.msg || 'Error al editar trabajador', 'error');
-                        return;
-                    }
-                    modalEditarTrabajador.hide();
-                    Swal.fire('Correcto', 'Trabajador actualizado correctamente', 'success').then(() => location.reload());
-                }).catch(() => Swal.fire('Error', 'Error al guardar cambios del trabajador', 'error'));
+
+                fetch('api/editTrabajador.php', {
+                    method: 'POST',
+                    body: new FormData(this)
+                })
+                    .then(r => r.json())
+                    .then(resp => {
+                        if (!resp.ok) {
+                            Swal.fire('Error', resp.msg || 'Error al editar trabajador', 'error');
+                            return;
+                        }
+
+                        modalEditarTrabajador.hide();
+                        Swal.fire('Correcto', 'Trabajador actualizado correctamente', 'success').then(() => location.reload());
+                    })
+                    .catch(() => Swal.fire('Error', 'Error al guardar cambios del trabajador', 'error'));
             });
 
             document.querySelectorAll('.btn-desactivar').forEach(boton => {
@@ -191,13 +247,20 @@ while ($raza = $listaRazas->fetch_assoc()) {
                         datos.append('id', id);
                         datos.append('tipo', tipo);
 
-                        fetch('api/desactivarRegistro.php', { method: 'POST', body: datos }).then(r => r.json()).then(resp => {
-                            if (!resp.ok) {
-                                Swal.fire('Error', resp.msg || 'No se pudo desactivar el registro.', 'error');
-                                return;
-                            }
-                            Swal.fire('Desactivado', 'El registro fue desactivado correctamente.', 'success').then(() => location.reload());
-                        }).catch(() => Swal.fire('Error', 'Error de conexión con el servidor.', 'error'));
+                        fetch('api/desactivarRegistro.php', {
+                            method: 'POST',
+                            body: datos
+                        })
+                            .then(r => r.json())
+                            .then(resp => {
+                                if (!resp.ok) {
+                                    Swal.fire('Error', resp.msg || 'No se pudo desactivar el registro.', 'error');
+                                    return;
+                                }
+
+                                Swal.fire('Desactivado', 'El registro fue desactivado correctamente.', 'success').then(() => location.reload());
+                            })
+                            .catch(() => Swal.fire('Error', 'Error de conexión con el servidor.', 'error'));
                     });
                 });
             });
@@ -211,16 +274,16 @@ while ($raza = $listaRazas->fetch_assoc()) {
         <img src="../imagenes/Imagen.png" class="rounded-circle" width="50">
         <img src="../imagenes/Imagen.png" class="rounded-circle" width="50">
     </div>
+
     <div class="text-center flex-grow-1">
-            <a class="ink-offset-2 link-underline link-underline-opacity-0 link-light" href="../admin/pprincipal.php">
+        <a class="ink-offset-2 link-underline link-underline-opacity-0 link-light" href="../admin/pprincipal.php">
             <h4 class="mb-0">Mi mascota Comondú</h4>
             <small>Registro animal del municipio de Comondú</small>
-            </a>
-        </div>
-    <div class="d-flex align-items-center gap-3">
-        <a class="btn btn-sm btn-outline-light" href="../admin/pprincipal.php">
-            Regresar
         </a>
+    </div>
+
+    <div class="d-flex align-items-center gap-3">
+        <a class="btn btn-sm btn-outline-light" href="../admin/pprincipal.php">Regresar</a>
     </div>
 </header>
 
@@ -228,16 +291,30 @@ while ($raza = $listaRazas->fetch_assoc()) {
     <div class="main-card shadow-lg d-flex bg-white">
         <aside class="sidebar p-4 d-flex flex-column align-items-center">
             <div class="d-flex flex-column gap-2 w-100 mb-5">
-                <button type="button" class="btn-sidebar btn-consulta active" data-target="duenos">Cargar dueños</button>
-                <button type="button" class="btn-sidebar btn-consulta" data-target="animales">Cargar animales</button>
-                <button type="button" class="btn-sidebar btn-consulta" data-target="trabajadores">Cargar trabajadores</button>
+                <button type="button" class="btn-sidebar btn-consulta <?= $tabActiva === 'duenos' ? 'active' : '' ?>" data-target="duenos">Cargar dueños</button>
+                <button type="button" class="btn-sidebar btn-consulta <?= $tabActiva === 'animales' ? 'active' : '' ?>" data-target="animales">Cargar animales</button>
+                <button type="button" class="btn-sidebar btn-consulta <?= $tabActiva === 'trabajadores' ? 'active' : '' ?>" data-target="trabajadores">Cargar trabajadores</button>
             </div>
         </aside>
 
         <section class="content-area p-3 w-100">
             <div class="black-box-container bg-light rounded p-3">
-                <div id="consulta-duenos" class="consulta-tabla">
+                <div id="consulta-duenos" class="consulta-tabla <?= $tabActiva !== 'duenos' ? 'd-none' : '' ?>">
                     <h3 class="mb-3">Dueños registrados</h3>
+
+                    <nav class="navbar bg-body-tertiary mb-3 rounded">
+                        <div class="container-fluid">
+                            <form class="d-flex w-100" role="search" action="consultas.php" method="GET">
+                                <input type="hidden" name="tab" value="duenos">
+                                <input class="form-control me-2 flex-grow-1" type="search" placeholder="Buscar dueño" name="buscar_dueno" value="<?= htmlspecialchars($buscarDueno) ?>">
+                                <button class="btn btn-outline-primary" type="submit">Buscar</button>
+                                <?php if ($buscarDueno !== ''): ?>
+                                    <a href="consultas.php?tab=duenos" class="btn btn-outline-secondary ms-2">Limpiar</a>
+                                <?php endif; ?>
+                            </form>
+                        </div>
+                    </nav>
+
                     <div class="table-responsive">
                         <table class="table table-striped table-hover align-middle">
                             <thead class="table-success">
@@ -245,6 +322,7 @@ while ($raza = $listaRazas->fetch_assoc()) {
                                     <th>ID</th><th>Nombre</th><th>CURP</th><th>Teléfono</th><th>Colonia</th><th>Ciudad</th><th>Dirección</th><th>Clave catastral</th><th>Acciones</th>
                                 </tr>
                             </thead>
+
                             <tbody>
                                 <?php if ($datosDuenos && $datosDuenos->num_rows > 0): ?>
                                     <?php while ($dueno = $datosDuenos->fetch_assoc()): ?>
@@ -276,8 +354,22 @@ while ($raza = $listaRazas->fetch_assoc()) {
                     </div>
                 </div>
 
-                <div id="consulta-animales" class="consulta-tabla d-none">
+                <div id="consulta-animales" class="consulta-tabla <?= $tabActiva !== 'animales' ? 'd-none' : '' ?>">
                     <h3 class="mb-3">Animales registrados</h3>
+
+                    <nav class="navbar bg-body-tertiary mb-3 rounded">
+                        <div class="container-fluid">
+                            <form class="d-flex w-100" role="search" action="consultas.php" method="GET">
+                                <input type="hidden" name="tab" value="animales">
+                                <input class="form-control me-2 flex-grow-1" type="search" placeholder="Buscar animal" name="buscar_animal" value="<?= htmlspecialchars($buscarAnimal) ?>">
+                                <button class="btn btn-outline-primary" type="submit">Buscar</button>
+                                <?php if ($buscarAnimal !== ''): ?>
+                                    <a href="consultas.php?tab=animales" class="btn btn-outline-secondary ms-2">Limpiar</a>
+                                <?php endif; ?>
+                            </form>
+                        </div>
+                    </nav>
+
                     <div class="table-responsive">
                         <table class="table table-striped table-hover align-middle">
                             <thead class="table-success">
@@ -285,6 +377,7 @@ while ($raza = $listaRazas->fetch_assoc()) {
                                     <th>ID</th><th>Mascota</th><th>Especie</th><th>Raza</th><th>Dueño</th><th>Colonia</th><th>Peso</th><th>Color</th><th>Sexo</th><th>Esterilizado</th><th>Cartilla</th><th>Acciones</th>
                                 </tr>
                             </thead>
+
                             <tbody>
                                 <?php if ($datosAnimales && $datosAnimales->num_rows > 0): ?>
                                     <?php while ($animal = $datosAnimales->fetch_assoc()): ?>
@@ -314,15 +407,36 @@ while ($raza = $listaRazas->fetch_assoc()) {
                     </div>
                 </div>
 
-                <div id="consulta-trabajadores" class="consulta-tabla d-none">
+                <div id="consulta-trabajadores" class="consulta-tabla <?= $tabActiva !== 'trabajadores' ? 'd-none' : '' ?>">
                     <h3 class="mb-3">Trabajadores registrados</h3>
+
+                    <nav class="navbar bg-body-tertiary mb-3 rounded">
+                        <div class="container-fluid">
+                            <form class="d-flex w-100" role="search" action="consultas.php" method="GET">
+                                <input type="hidden" name="tab" value="trabajadores">
+                                <input class="form-control me-2 flex-grow-1" type="search" placeholder="Buscar trabajador" name="buscar_trabajador" value="<?= htmlspecialchars($buscarTrabajador) ?>">
+                                <button class="btn btn-outline-primary" type="submit">Buscar</button>
+                                <?php if ($buscarTrabajador !== ''): ?>
+                                    <a href="consultas.php?tab=trabajadores" class="btn btn-outline-secondary ms-2">Limpiar</a>
+                                <?php endif; ?>
+                            </form>
+                        </div>
+                    </nav>
+
                     <div class="table-responsive">
                         <table class="table table-striped table-hover align-middle">
                             <thead class="table-success">
                                 <tr>
-                                    <th>ID</th><th>Nombre</th><th>CURP</th><th>Correo</th><th>Rol</th><th>Fecha de registro</th><th>Acciones</th>
+                                    <th>ID</th>
+                                    <th>Nombre</th>
+                                    <th>CURP</th>
+                                    <th>Correo</th>
+                                    <th>Rol</th>
+                                    <th>Fecha de registro</th>
+                                    <th>Acciones</th>
                                 </tr>
                             </thead>
+
                             <tbody>
                                 <?php if ($datosTrabajadores && $datosTrabajadores->num_rows > 0): ?>
                                     <?php while ($trabajador = $datosTrabajadores->fetch_assoc()): ?>
@@ -464,7 +578,5 @@ while ($raza = $listaRazas->fetch_assoc()) {
         </div>
     </div>
 </div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
