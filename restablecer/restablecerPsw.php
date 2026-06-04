@@ -10,18 +10,16 @@
 </head>
 <body class="bg-success-subtle vh-100">
     <header class="main-header">
-    <div class="title-container">
-        <h1>Mi mascota Comondú</h1>
-        <p>Registro animal del municipio de comondú</p>
-    </div>
-    <link rel="icon" href="../imagenes/logo.png" type="image/x-icon">
-    <div class="header-logos">
-    <img src="../imagenes/ImagenEquipoNF.png" alt="Marca de agua" class="logo-img">
-    <img src="imagenes/Imagen.png" alt="Logo de ecología" class="logo-img">
-    <img src="imagenes/Imagen.png" alt="Logo del gobierno" class="logo-img">
+        <div class="title-container">
+            <h1>Mi mascota Comondú</h1>
+            <p>Registro animal del municipio de comondú</p>
+        </div>
+        <div class="header-logos">
+        <img src="../imagenes/LogoOficial1.png" alt="Marca de agua" class="logo-img">
+        <img src="../imagenes/LogoOficial2.png" alt="Logo de ecología" class="logo-img logo-blanco">
+        <img src="../imagenes/LogoOficial3.png" alt="Logo del gobierno" class="logo-img">
     </div>
     </header>
-
 <main class="container d-flex justify-content-center mt-5">
     <div class="card shadow p-4 w-100" style="max-width: 500px;">
         <h4 class="text-center mb-1">

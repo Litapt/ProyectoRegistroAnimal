@@ -6,27 +6,33 @@
 .PPHeader {
     background: linear-gradient(to right, #20a383, #52c47d);
 }
-
-.header-circle {
-    width: 80px;
-    height: 80px;
-    background-color: white;
-    border-radius: 50%;
+/* 1. Alineación y separación de los logos */
+.header-logos {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 0.7rem;
-    font-weight: bold;
-    color: white;
+    align-items: center; 
+    gap: 20px; 
 }
 
-.profile-main-circle {
-    width: 450px;
-    height: 450px;
-    background-color: #ff3131;
-    border-radius: 50%;
-    margin-top: 20px;
+.header-logos img {
+    height: 90px; 
+    width: auto;  
+    object-fit: contain;
+}
+
+.logo-blanco {
+    background-color: white;
+    border-radius: 8px;       
+    padding: 6px;            
+}
+
+.header-titulo-central {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;     
+    width: 100%;             
+    max-width: 400px;      
+    z-index: 1;
 }
 
 .data-row {

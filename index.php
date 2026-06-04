@@ -39,13 +39,13 @@
             <p>Registro animal del municipio de comondú</p>
         </div>
         <div class="header-logos">
-        <img src="imagenes/Imagen.png" alt="Marca de agua" class="logo-img">
-        <img src="imagenes/Imagen.png" alt="Logo de ecología" class="logo-img">
-        <img src="imagenes/Imagen.png" alt="Logo del gobierno" class="logo-img">
-</div>
+        <img src="imagenes/LogoOficial1.png" alt="Marca de agua" class="logo-img">
+        <img src="imagenes/LogoOficial2.png" alt="Logo de ecología" class="logo-img logo-blanco">
+        <img src="imagenes/LogoOficial3.png" alt="Logo del gobierno" class="logo-img">
+    </div>
     </header>
     <main class="content">
-        <img src="imagenes/Huella.Png" alt="animal" class="deco-left">
+        <img src="imagenes/Huella.png" alt="animal" class="deco-left">
         <div class="login-card">
             <h2>Inicio de sesion</h2>
             <form action="login/login.php" method="post">

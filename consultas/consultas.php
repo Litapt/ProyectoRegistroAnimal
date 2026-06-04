@@ -270,16 +270,16 @@ while ($raza = $listaRazas->fetch_assoc()) {
 
 <body class="bg-success-subtle">
 <header class="p-3 PPHeader text-white d-flex align-items-center justify-content-between">
-    <div class="d-flex gap-2">
-        <img src="../imagenes/Imagen.png" class="rounded-circle" width="50">
-        <img src="../imagenes/Imagen.png" class="rounded-circle" width="50">
-    </div>
-
-    <div class="text-center flex-grow-1">
-        <a class="ink-offset-2 link-underline link-underline-opacity-0 link-light" href="../admin/pprincipal.php">
+    <div class="header-logos">
+            <img src="../imagenes/LogoOficial1.png" alt="Marca de agua" class="logo-img">
+            <img src="../imagenes/LogoOficial2.png" alt="Logo de ecología" class="logo-img logo-blanco">
+            <img src="../imagenes/LogoOficial3.png" alt="Logo del gobierno" class="logo-img">
+        </div>
+    <div class="header-titulo-central">
+            <a class="ink-offset-2 link-underline link-underline-opacity-0 link-light" href="../admin/pprincipal.php">
             <h4 class="mb-0">Mi mascota Comondú</h4>
             <small>Registro animal del municipio de Comondú</small>
-        </a>
+            </a>
     </div>
 
     <div class="d-flex align-items-center gap-3">
@@ -465,7 +465,9 @@ while ($raza = $listaRazas->fetch_assoc()) {
     </div>
 </main>
 
-<div class="PIMarcaDeAgua"></div>
+<div class="PIMarcaDeAgua">
+    <img src="../imagenes/ImagenEquipoNF.png">
+</div>
 
 <div class="modal fade" id="modalEditarDueno" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">

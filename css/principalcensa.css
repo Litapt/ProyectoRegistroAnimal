@@ -8,25 +8,40 @@
     background-color: #52c47d !important;
 }
 
+.header-titulo-central {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;      /* Centra el texto por dentro */
+    width: 100%;             /* Evita que el texto se parta en pantallas medianas */
+    max-width: 400px;        /* Delimita el espacio para que no choque con los logos */
+    z-index: 1;
+}
+
 .PPHeader {
     background: linear-gradient(to right, #20a383, #52c47d);
     padding: 20px !important;
 }
 
-/* Estilo de los círculos rojos del header */
-.circulo-logo, .circulo-perfil {
-    background-color: #ff3131;
-    color: white;
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
+
+/* Este es el contenedor de las imágenes */
+.header-logos {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 0.75rem;
-    padding: 10px;
-    text-decoration: none;
+    align-items: center; 
+    gap: 20px; /* Esto crea un espacio uniforme entre cada logo */
+}
+
+/* Control total sobre las imágenes */
+.header-logos img {
+    height: 90px; /* Es mejor fijar la altura para que todos se vean parejos */
+    width: auto;  /* El ancho se ajusta solo para no deformar la imagen */
+    object-fit: contain;
+}
+/* Fondo blanco exclusivo para el logo ecologia*/
+.logo-blanco {
+    background-color: white;
+    border-radius: 8px;      
+    padding: 6px;            /* Crea un margen interno para el logo */
 }
 
 /* Botón cerrar sesión ovalado */

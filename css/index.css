@@ -41,9 +41,15 @@ body {
 
 /* Control total sobre las imágenes */
 .header-logos img {
-    height: 50px; /* Es mejor fijar la altura para que todos se vean parejos */
+    height: 120px; /* Es mejor fijar la altura para que todos se vean parejos */
     width: auto;  /* El ancho se ajusta solo para no deformar la imagen */
     object-fit: contain;
+}
+/* Fondo blanco exclusivo para el logo ecologia*/
+.logo-blanco {
+    background-color: white;
+    border-radius: 8px;       /* Redondea las esquinas del fondo */
+    padding: 6px;            /* Crea un margen interno para que respire el logo */
 }
 
 .title-container h1 {

@@ -32,12 +32,13 @@ require_once 'misDatosCons.php';
     </head>
     <body class="bg-success-subtle">
     <header class="position-relative d-flex align-items-center justify-content-between p-3 PPHeader text-white">
-        <div class="d-flex align-items-center gap-2">
-            <img src="../imagenes/Imagen.png" class="rounded-circle" width="50">
-            <img src="../imagenes/Imagen.png" class="rounded-circle" width="50">
-        </div>
-        <div class="text-center flex-grow-1">
-            <a class="ink-offset-2 link-underline link-underline-opacity-0 link-light" href="../admin/pprincipal.php">
+    <div class="header-logos">
+        <img src="../imagenes/LogoOficial1.png" alt="Marca de agua" class="logo-img">
+        <img src="../imagenes/LogoOficial2.png" alt="Logo de ecología" class="logo-img logo-blanco">
+        <img src="../imagenes/LogoOficial3.png" alt="Logo del gobierno" class="logo-img">
+    </div>
+        <div class="header-titulo-central">
+            <a class="ink-offset-2 link-underline link-underline-opacity-0 link-light" href="../capturista/principalCensador.php">
             <h4 class="mb-0">Mi mascota Comondú</h4>
             <small>Registro animal del municipio de Comondú</small>
             </a>
@@ -47,25 +48,10 @@ require_once 'misDatosCons.php';
                 Regresar
             </a>
 
-            <a href="../accesosgral/misDatos.php">
-                <img src="../imagenes/Imagen.png" class="rounded-circle" width="50">
-            </a>
         </div>
     </header>
     <main class="container-fluid px-5 mt-4">
         <div class="row align-items-start">
-            <div class="col-md-5 text-center">
-                <div class="profile-main-circle d-flex align-items-center justify-content-center mx-auto">
-                    <span class="fs-2 fw-bold text-white">
-                        Foto de perfil
-                    </span>
-                </div>
-                <div class="mt-3">
-                    <button class="btn-pink-action">
-                        Tomar foto
-                    </button>
-                </div>
-            </div>
             <div class="col-md-7">
                 <div class="d-flex flex-column gap-3">
                     <div class="data-row">
@@ -122,14 +108,6 @@ require_once 'misDatosCons.php';
                                 Mostrar
                             </button>
                         </div>
-                    </div>
-                    <div class="d-flex gap-4 mt-4 justify-content-center">
-                        <button class="btn-editar">
-                            Editar
-                        </button>
-                        <button class="btn-pink-action">
-                            Guardar
-                        </button>
                     </div>
                 </div>
             </div>

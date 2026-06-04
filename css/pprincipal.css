@@ -7,6 +7,37 @@
     background: linear-gradient(to right, #20a383, #52c47d);
 }
 
+.header-logos {
+    display: flex;
+    align-items: center; 
+    gap: 20px; 
+}
+
+/* Control total sobre las imágenes (Igual que en la Foto 2) */
+.header-logos img {
+    height: 90px; 
+    width: auto;  
+    object-fit: contain;
+}
+
+/* Fondo blanco exclusivo para el logo de ecología (Comité Pro-Animal) */
+.logo-blanco {
+    background-color: white;
+    border-radius: 12px; /* Esquinas ligeramente suavizadas */
+    padding: 6px;            
+}
+
+/* Posicionamiento del título en el centro exacto */
+.header-titulo-central {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;     
+    width: 100%;             
+    max-width: 400px;      
+    z-index: 1;
+}
+
 /* Estilo de los botones grandes dentro del cuadro blanco */
 .boton-menu-grande {
     background-color: #20a383; /* Tu color verde actual */

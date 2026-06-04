@@ -1,68 +1,97 @@
-header{
-    background: linear-gradient(to right, #20a383, #4ecc7c);
-}
 
-.logo-img{
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid rgba(255, 255, 255, 0.3);
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
     background-color: #4ecc7c !important; 
 }
 
-.divform{
-    height:100vh;
-    display:grid;
-    place-items: center;
+header {
+    background: linear-gradient(to right, #20a383, #4ecc7c);
 }
 
-.PIMarcaDeAgua img{
-    position:fixed;
-    bottom:0;
-    right:0;
-    width:120px;
-    opacity:0.7;
+
+.header-logos {
+    display: flex;
+    align-items: center; 
+    gap: 20px; 
 }
 
-:root{
-    --main-color:red;
-    --dark-color:#20a383;
-    --step-color:gray;
-    --step-size:32px;
-    --steps:3;
+.header-logos img {
+    height: 90px; 
+    width: auto;  
+    object-fit: contain;
+}
+
+/* Fondo blanco para el logo de ecología (Comité Pro-Animal) */
+.logo-blanco {
+    background-color: white;
+    border-radius: 12px; 
+    padding: 6px;            
+}
+
+.header-titulo-central {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;     
+    width: 100%;             
+    max-width: 400px;      
+    z-index: 1;
+}
+
+.PIMarcaDeAgua img {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 120px;
+    opacity: 0.7;
+}
+
+/*  INTERFAZ DE FORMULARIO POR PASOS (ESTILOS PROTEGIDOS) */
+:root {
+    --main-color: red;
+    --dark-color: #20a383;
+    --step-color: gray;
+    --step-size: 32px;
+    --steps: 3;
     --progress-width: calc((var(--steps) - 1) / var(--steps) * 100%);
 }
 
-.formulario{
-    background-color:white;
+.divform {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.formulario {
+    background-color: white;
     padding: 32px;
     border-radius: 8px;
-    width:min(600px,80%);
+    width: min(600px, 80%);
     box-shadow: 0 4px 16px black;
 }
 
-h1{
+h1 {
     text-align: center;
     margin-bottom: 16px;
 }
 
-.contenedor-progreso{
+.contenedor-progreso {
     position: relative;
 }
 
-.contenedor-progreso::before{
-    content:"";
+.contenedor-progreso::before {
+    content: "";
     height: 4px;
     width: var(--progress-width);
     background-color: var(--step-color);
     position: absolute;
     top: calc(var(--step-size) / 2);
     left: 50%;
-    translate:-45% -50%;
+    translate: -45% -50%;
 }
 
 .contenedor-progreso .progreso {
@@ -72,15 +101,14 @@ h1{
     position: absolute;
     top: calc(var(--step-size) / 2);
     left: 50%;
-    translate:-45% -50%;
-    z-index:2;
+    translate: -45% -50%;
+    z-index: 2;
     transform: scaleX(0);
     transform-origin: left;
     transition: 0.3s;
 }
 
-
-.contenedor-progreso ol{
+.contenedor-progreso ol {
     list-style-type: none;
     display: flex;
     align-items: flex-start;
@@ -90,7 +118,7 @@ h1{
     z-index: 3;
 }
 
-.contenedor-progreso li{
+.contenedor-progreso li {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -100,9 +128,9 @@ h1{
     transition: 0.3s linear 0.3s;
 }
 
-.contenedor-progreso li::before{
+.contenedor-progreso li::before {
     counter-increment: step-number;
-    content:counter(step-number);
+    content: counter(step-number);
     background-color: var(--step-color);
     width: var(--step-size);
     height: var(--step-size);
@@ -114,75 +142,75 @@ h1{
     transition: 0.3s linear 0.3s;
 }
 
-.contenedor-progreso li:where(.dn, .ds){
-    color:black;
+.contenedor-progreso li:where(.dn, .ds) {
+    color: black;
     font-weight: 500;
 }
 
-.contenedor-progreso li.dn::before{
+.contenedor-progreso li.dn::before {
     background-color: var(--main-color);
 }
 
-.contenedor-progreso li.ds::before{
+.contenedor-progreso li.ds::before {
     background-color: var(--dark-color);
     box-shadow: 0 0 0 3px #21a7868b;
 }
 
-button{
+button {
     cursor: pointer;
     border: none;
     border-radius: 40px;
     padding: 8px 16px;
     background-color: var(--main-color);
-    color:white;
+    color: white;
     font-size: 14px;
     transition: 0.3s;
 }
 
-button:active, button:hover{
+button:active, button:hover {
     background-color: var(--dark-color);
 }
 
-button:disabled{
+button:disabled {
     opacity: 0.8;
 }
 
-button:focus{
+button:focus {
     outline-color: black;
 }
 
-button[type="submit"]{
+button[type="submit"] {
     background-color: black;
 }
 
-button[type="submit"]:hover, button[type="submit"]:active{
+button[type="submit"]:hover, button[type="submit"]:active {
     background-color: black;
 }
 
-.control{
+.control {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap:16px;
+    gap: 16px;
     margin-top: 16px;
     padding-inline: 8px;
 }
 
-.controls button{
-    flex:1;
+.controls button {
+    flex: 1;
 }
 
-.pasos-contenedor{
-    display:flex;
+.pasos-contenedor {
+    display: flex;
     overflow: hidden;
 }
 
-.step.ds{
+.step.ds {
     opacity: 1;
 }
 
-.step{
-    flex:1 0 100%;
+.step {
+    flex: 1 0 100%;
     padding: 24px 8px;
     opacity: 0;
     height: fit-content;
