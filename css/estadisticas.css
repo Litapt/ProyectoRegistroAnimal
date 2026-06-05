@@ -12,7 +12,7 @@ body {
     gap: 20px; 
 }
 
-/* Control total sobre las imágenes (Igual que en la Foto 2) */
+/* Control total sobre las imágenes */
 .header-logos img {
     height: 90px; 
     width: auto;  
